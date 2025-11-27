@@ -1,56 +1,43 @@
-#######################
-# Eclipse Project Files
-#######################
-
+﻿# Eclipse / IDE
 .metadata/
 .settings/
-.classpath
 .project
+.classpath
 
-#######################
-# Java Build Files
-#######################
-
+# Java build
 bin/
+out/
 target/
 build/
-out/
 *.class
 *.jar
 *.war
 *.ear
-*.log
 
-#######################
-# OS / Editor Files
-#######################
-
+# OS / Editor
 .DS_Store
 Thumbs.db
 *.swp
 *~
+.vscode/
+.idea/
+*.iml
 
-########################
-# Backup / Temp Files
-########################
-
+# Logs / temp / backups
+*.log
 *.tmp
 *.bak
 *.old
 *.cache
 
-########################
-# Eclipse Specific
-########################
+# Archives / installers
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.exe
 
+# Misc
 .recommenders/
 .loadpath
 .factorypath
-
-########################
-# IntelliJ / VS Code (if opened)
-########################
-
-.idea/
-*.iml
-.vscode/
