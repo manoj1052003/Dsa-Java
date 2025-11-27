@@ -1,0 +1,31 @@
+package com.july;
+
+public class stringbasic {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "pentagon  space";
+		int count_v = 0;
+		int count_c = 0;
+		int count_s = 0;
+		for(int i=0; i<s.length(); i++) {
+			char ch = s.charAt(i);
+			if(ch=='a' || ch =='e' || ch =='i' || ch =='o' || ch =='u') {
+				count_v++;
+			}
+			else if(ch == ' ') {
+				count_s++;
+			}
+			else {
+				count_c++;
+			}
+			
+		}
+		System.out.println(count_v);
+		System.out.println(count_c);
+		System.out.println(count_s);
+		
+		
+	}
+
+}

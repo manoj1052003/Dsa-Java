@@ -1,0 +1,35 @@
+package com.novdec.array;
+
+public class mergetwosorted {
+	public static int[] merge(int[] arr1,int[]arr2) {
+		int[] res = new int[arr1.length+arr2.length];
+		int i =0;
+		int j = 0;
+		int k= 0;
+		while(i<arr1.length && j <arr2.length) {
+			if(arr1[i]<arr2[j]) {
+				res[k]=arr1[i];
+				k++;
+				i++;
+			}
+			else {
+				res[k]=arr2[i];
+				k++;
+				j++;	
+			}
+		}
+		return res;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr1 = {10,40,46,67,80};
+		int[] arr2= {50,56,60,90,100};
+		int [] res = merge(arr1,arr2);
+		for (int i =0; i<res.length; i++) {
+			System.out.println(i+"===>"+res[i]);
+		}
+
+	}
+
+}

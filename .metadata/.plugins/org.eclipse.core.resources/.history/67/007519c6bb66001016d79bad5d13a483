@@ -1,0 +1,18 @@
+package com.basicop;
+
+public class Class1assign {
+	
+
+	public static void main(String[] args) {
+		int a = 10;
+		System.out.println(a++);
+		System.out.println(++a);
+		System.out.println(a--);
+		System.out.println(--a);
+		
+		
+		
+		
+	}
+
+}

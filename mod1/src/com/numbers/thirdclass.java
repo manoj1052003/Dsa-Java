@@ -1,0 +1,51 @@
+ package com.numbers;
+
+public class thirdclass {
+	
+	public static int c_digit(int num) {
+		int count = 0;
+		while(num!=0) {
+			num = num/10;
+			count++;
+		}
+		return count;
+	}
+	
+	public static int f_arm(int num) {
+		int res = 0;
+		int digit = c_digit(num);
+		while(num!=0) {
+			int rem = num % 10;
+			res = (int)Math.pow(rem, digit) + res;
+			num = num/10;
+		}
+		return res;
+	}
+	
+	
+	public static int p_fact(int num) {
+		int count = 0;
+		for(int i=1; i<=num; i++) {
+			if(num%i==0) {
+				count++;
+			}
+		}
+		return count;
+	}
+
+	public static void main(String[] args) {
+		for(int i=1; i<=1000; i++) {
+			int num = i;
+			int fact = p_fact(num);
+			if(fact==2) {
+				System.out.println(num);
+			}
+		}
+		
+
+		
+		
+		
+	}
+
+}

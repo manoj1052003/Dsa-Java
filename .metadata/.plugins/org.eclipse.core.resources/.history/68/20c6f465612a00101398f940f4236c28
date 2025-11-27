@@ -1,0 +1,40 @@
+package com.sepnov;
+
+public class num1 {
+	
+	public static String rev(String s) {
+		String res = "";
+		for(int i=s.length()-1; i>=0; i--) {
+			res = res + s.charAt(i);
+		}
+		return res;
+	}
+	
+	public static void main(String[] args) {
+
+		String s = "hello";
+		String l_str = "";
+		int len_lstr = 0;
+		for(int i=0; i<s.length(); i++) {
+			String res = "";
+			for(int j=i; j<s.length(); j++) {
+				//System.out.println(s.substring(i,j+1));
+				res = res + s.charAt(j);
+				String rev = rev(res);
+				if(res.equals(rev)) {
+					if(res.length()>len_lstr){
+						l_str = res;
+						len_lstr = res.length();
+					}
+				}
+				
+			}
+		}
+		
+		System.out.println(l_str);
+		
+		
+
+	}
+ 
+}

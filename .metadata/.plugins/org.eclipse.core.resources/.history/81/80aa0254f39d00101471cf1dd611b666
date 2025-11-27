@@ -1,0 +1,28 @@
+package com.map;
+
+import java.util.HashMap;
+
+public class Basic {
+
+	public static void main(String[] args) {
+		int [] arr = {12,23,34,43,1,12,12,34,12};
+		HashMap<Integer, Integer> map = new HashMap<>();
+		System.out.println(map);
+		
+		for(int key : arr) {
+			if(map.containsKey(key)) {
+				map.put(key, map.get(key)+1);
+			}
+			else {
+				map.put(key, 1);
+			}
+		}
+		//System.out.println(map);
+		for(int key : map.keySet()) {
+			System.out.println(key);
+		}
+		
+		
+	}
+
+}

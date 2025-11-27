@@ -1,0 +1,63 @@
+package com.DLLB;
+
+
+class Node{
+	Node prev;
+	int data;
+	Node next;
+	
+	Node(int data){
+		this.data = data;
+		this.prev = null;
+		this.next = null;
+	}
+}
+
+class DLL{
+	Node head;
+	Node tail;
+	
+	public void print() {
+		Node curr = head;
+		while(curr != null) {
+			System.out.print(curr.data+" ");
+			curr = curr.next;
+		}
+		System.out.println();
+	}
+	
+	public void print_rev() {
+		Node curr = tail;
+		while(curr != null) {
+			System.out.print(curr.data+" ");
+			curr = curr.prev;
+		}
+		System.out.println();
+	}
+	
+	public void add_last(int data) {
+		Node temp = new Node(data);
+		if(head == null) {
+			head = tail = temp;
+		}
+		else {
+			temp.prev = tail;
+			tail.next = temp;
+			tail = temp;
+		}
+	}
+}
+
+public class First {
+
+	public static void main(String[] args) {
+		DLL dll = new DLL();
+		dll.add_last(10);
+		dll.add_last(20);
+		dll.add_last(40);
+		dll.add_last(30);
+		dll.print();
+		dll.print_rev();
+	}
+
+}

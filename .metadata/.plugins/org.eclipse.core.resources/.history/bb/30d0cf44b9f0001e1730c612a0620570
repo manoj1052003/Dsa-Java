@@ -1,0 +1,20 @@
+package com.csr;
+import java.util.Scanner;
+
+public class operatrs {
+
+	public static void main(String[] args) {
+	
+	 //int a = 10;
+	 //int b = 20;
+	 String a = new String("Rama");
+	 String b =new String("rama");
+	 System.out.println(a.equals(b));
+	 System.out.println(a.equalsIgnoreCase(b));
+	 System.out.println(a==b);
+	 
+	 
+	}
+		
+}
+

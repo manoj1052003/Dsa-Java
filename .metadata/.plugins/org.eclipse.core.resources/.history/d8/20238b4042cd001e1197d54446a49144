@@ -1,0 +1,10 @@
+package com.novdec.array;
+
+public class twodarray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

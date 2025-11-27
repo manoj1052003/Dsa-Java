@@ -1,0 +1,19 @@
+package com.sepnov;
+import java.util.*;
+public class class21 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "kiran";
+		String s1 = "kiran";
+		System.out.println(s == s1);
+		
+		String s2 = "kira";
+		String s3 = s2 +'n';
+		System.out.println(s3);
+		System.out.println(s.equals(s3));
+		
+		
+	}
+
+}

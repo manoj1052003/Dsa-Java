@@ -1,0 +1,143 @@
+package com.dll;
+
+
+class Node{
+	int data;
+	Node next;
+	Node prev;
+	
+	Node(int data){
+		this.data = data;
+		this.next = null;
+		this.prev = null;
+	}
+}
+
+class DLL{
+	Node head;
+	Node tail;
+	
+	public void print() {
+		Node curr = head;
+		while(curr!= null) {
+			System.out.print(curr.data+" ");
+			curr = curr.next;
+		}
+		System.out.println();
+	}
+	
+	public void print_rev() {
+		Node curr = tail;
+		while(curr!= null) {
+			System.out.print(curr.data+" ");
+			curr = curr.prev;
+		}
+		System.out.println();
+	}
+	
+	public void add_last(int data) {
+		Node temp = new Node(data);
+		if(tail == null) {
+			head = tail = temp;
+			
+		}
+		else {
+			temp.prev = tail;
+			tail.next = temp;
+			tail = temp;
+		}
+	}
+	
+	public void add_first(int data) {
+		Node temp = new Node(data);
+		if(head == null) {
+			head = tail = temp;
+			
+		}
+		else {
+			temp.next = head;
+			head.prev = temp;
+			head = temp;
+		}
+	}
+	
+	public void delete_first() {
+		if(head == null) {
+			System.out.println("ll is already empty");
+			return;
+		}
+		if(head == tail) {
+			head = tail = null;
+		}
+		else {
+			head = head.next;
+			head.prev = null;
+		}
+	}
+	
+	public void delete_last() {
+		if(tail == null) {
+			System.out.println("ll is already empty");
+			return;
+		}
+		if(head == tail) {
+			head = tail = null;
+		}
+		else {
+			tail = tail.prev;
+			tail.next = null;
+		}
+	}
+	
+	public int size() {
+		int count = 0;
+		Node curr = head;
+		while(curr != null) {
+			curr = curr.next;
+			count++;
+		}
+		return count;
+	}
+	
+	public void add_at_index(int index, int data) {
+		if(index < 0 || index > size()) {
+			System.out.println("inv index");
+			return;
+		}
+		if(index == 0) {
+			add_first(data);
+			return;
+		}
+		if(index == size()) {
+			add_last(data);
+		}
+		else {
+			Node temp = new Node(data);
+			Node curr = head;
+			for(int i=0; i<index-1; i++) {
+				curr = curr.next;
+			}
+			temp.next = curr.next;
+			temp.prev = curr;
+			curr.next.prev = temp;
+			curr.next = temp;
+		}
+	}
+}
+
+public class First {
+	
+	public static void main(String[] args) {
+		DLL dll = new DLL();
+		dll.add_last(10);
+		dll.add_last(20);
+		dll.add_last(30);
+		dll.add_last(40);
+		dll.print();
+		dll.add_at_index(2, 50);
+		dll.print();
+		dll.print_rev();
+		
+	}
+
+}

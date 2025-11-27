@@ -1,0 +1,16 @@
+package com.numbers;
+
+public class classmeth {
+
+	public static void main(String[] args) {
+		int a = 7;
+		int b = 12;
+		int smlst = (a<b)?b:a;
+		for(int i=1; i<=smlst; i++) {
+			if(a%i==0 && b%i==0) {
+				hcf = i; 
+			}
+		}
+		System.out.println(hcf);
+	}
+}

@@ -1,0 +1,36 @@
+package com.tree;
+
+
+
+class TreeNode{
+	 int val;
+	 TreeNode left,right;
+	 TreeNode(int val) {
+		this.val = val;
+		left = right = null;
+	}
+}
+public class first {
+	
+	public void DFS_preorder(TreeNode node) {
+		if(node == null) {
+			return ;
+		}
+		System.out.print(node.val+" ");
+		DFS_preorder(node.left);
+		DFS_preorder(node.right);
+		
+	}
+
+	public static void main(String[] args) {
+		TreeNode root = new TreeNode(10);
+		root.left = new TreeNode(20);
+		root.right = new TreeNode(30);
+		root.left.left = new TreeNode(40);
+		root.left.right = new TreeNode(50);
+		
+		first tr = new first();
+		tr.DFS_preorder(root);
+	}
+
+}

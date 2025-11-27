@@ -1,0 +1,27 @@
+package com.pattern;
+
+import java.util.Scanner;
+
+public class toughpro {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		System.out.println("enter numebr of rows");
+		int rows = scan.nextInt();
+		int sum = 0;
+		for (int i=1; i<=5; i++)
+		{	
+			sum = sum +i;
+			k=sum
+			for (int j=0; j<i; j++)
+			{
+				System.out.print(k+" ");
+				k-=1;
+			}
+			System.out.println();
+		}
+
+	}
+
+}

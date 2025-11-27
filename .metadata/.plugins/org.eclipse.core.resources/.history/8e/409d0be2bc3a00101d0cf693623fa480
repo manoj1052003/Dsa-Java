@@ -1,0 +1,25 @@
+package com.deque.doubleended;
+
+class Node{
+	int data;
+	Node next;
+	
+	Node(int data){
+		this.data = data;
+		this.next = null;
+	}
+}
+
+class deque{
+	
+}
+
+
+public class first {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

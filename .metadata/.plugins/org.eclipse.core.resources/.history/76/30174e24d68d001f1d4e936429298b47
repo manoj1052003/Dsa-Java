@@ -1,0 +1,36 @@
+ package com.numbers;
+
+public class thirdclass {
+	
+	public static int c_digit(int num) {
+		int count = 0;
+		while(num!=0) {
+			num = num/10;
+			count++;
+		}
+		return count;
+	}
+	
+	public static int c_arm(int num) {
+		int digit = c_digit(num);
+		int res = 0;
+		while(num!=0) {
+			int rem = num % 10;
+			res = res + (int)Math.pow(rem, digit);
+			num = num/10;
+		}
+		return res;
+	}
+	
+	public static void main(String[] args) {
+		int num = 152;
+		int res = c_arm(num);
+		if(res == num) {
+			System.out.println("its arm");
+		}
+		else {
+			System.out.println("its not");
+		}
+	}
+
+}

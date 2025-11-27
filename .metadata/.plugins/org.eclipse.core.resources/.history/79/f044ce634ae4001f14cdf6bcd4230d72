@@ -1,0 +1,11 @@
+package com.novdecnew;
+
+public class class22 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		char ch = 'A';
+		System.out.println(ch+1);
+	}
+
+}

@@ -1,0 +1,25 @@
+package com.basicop;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) {
+		String s1 = "hello";
+		String s2 = "hel"+"lo";
+		String s3 = new String("hello");
+		//System.out.println(s1 == s2);
+		String res = "";
+		for(int i = 0; i<s1.length(); i++) {
+			res += s1.charAt(i);
+		}
+		System.out.println(s3 == s1);
+		
+		
+		
+
+	}
+
+}

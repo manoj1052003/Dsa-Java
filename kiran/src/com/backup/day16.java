@@ -1,0 +1,27 @@
+package com.backup;
+
+public class day16 {
+	
+	public static int sub_array_sum(int[]arr, int k) {
+		int sum = 0;
+		for(int i=0; i<k; i++) {
+			sum+=arr[i];
+		}
+		int max_sum = sum;
+		
+		for(int i=k; i<arr.length; i++) {
+			sum  = sum+arr[i]-arr[i-k];
+			max_sum=Math.max(max_sum, sum);
+		}
+		return max_sum;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [] arr = {10,-5,3,5,4,12,-4,3};
+		int k = 3;
+		int res = sub_array_sum(arr,k);
+		System.out.println(res);
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.novdec;
+
+public class countdigit {
+
+	public static void main(String[] args) {
+		int n=00345;
+		int count=0;
+		while(n>0) {
+			n=n/10;
+			count+=1;
+		}
+		System.out.println(count);
+		// TODO Auto-generated method stub
+
+	}
+
+}

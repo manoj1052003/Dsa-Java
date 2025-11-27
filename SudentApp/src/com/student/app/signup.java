@@ -1,0 +1,75 @@
+package com.student.app;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class signup {
+
+	public static void main(String[] args) {
+		
+		
+		Connection con = null;
+		PreparedStatement ps = null;
+		String url = "jdbc:mysql://localhost:3306/company_1";
+		String user = "root";
+		String pass = "tiger";
+		String query = "INSERT INTO STUDENT VALUES(0,?,?,?,?,?,?,SYSDATE())";
+		Scanner sc = new Scanner(System.in);
+		// TODO Auto-generated method stub
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			
+			con = DriverManager.getConnection(url, user, pass);
+			
+			ps = con.prepareStatement(query);
+			
+			//collecting data from the user
+			System.out.println("enter the name");
+			String name = sc.next();
+			
+			System.out.println("enter the mob numebr");
+			long phone = sc.nextLong();
+			
+			System.out.println("enter the MAIL");
+			String mail = sc.next();
+			
+			System.out.println("enter the branch");
+			String branch = sc.next();
+			
+			System.out.println("location");
+			String loc = sc.next();
+			
+			System.out.println("password");
+			String pass1 = sc.next();
+			
+			System.out.println("confirm password babe");
+			String pass2 = sc.next();
+			
+			if(pass1.equals(pass2)) {
+				ps.setString(1, name);
+				ps.setLong(2, phone);
+				ps.setString(3, mail);
+				ps.setString(4, branch);
+				ps.setString(5, loc);
+				ps.setString(6, pass1);
+				
+				int i = ps.executeUpdate();
+				if(i>0) {
+					System.out.println("data added successfully");
+				}
+			}
+			else {
+				System.out.println("pass missmatch");
+			}
+			
+		}
+		catch (ClassNotFoundException | SQLException e) {
+			
+			e.printStackTrace();
+		}
+	}
+
+}

@@ -1,0 +1,61 @@
+package com.DSA;
+
+class Node{
+	int data;
+	Node next;
+	Node(int data){
+		this.data = data;
+		this.next = null;
+	}
+}
+
+class Linked_list{
+	static Node head;
+	static void add(int e) {
+		Node temp = new Node(e);
+		if(head == null) {
+			head = temp;
+		}
+		else {
+			Node curr = head; 
+			while(curr.next!=null) {
+				curr = curr.next;
+			}
+			curr.next = temp;
+		}
+	}
+	
+	
+	static void print_ll() {
+		
+		if(head == null) {
+			System.out.println("ll is empty");
+		}
+		else {
+			Node curr = head;
+			while(curr!=null) {
+				System.out.println(curr.data);
+				curr = curr.next;
+			}
+		}
+	}
+}
+
+
+public class first {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Linked_list ll = new Linked_list();
+		Linked_list.add(200);
+		Linked_list.add(10);
+		Linked_list.add(20);
+		Linked_list.add(30);
+		Linked_list.add(40);
+		Linked_list.add(199);
+		
+		Linked_list.print_ll();
+		
+	}
+
+}

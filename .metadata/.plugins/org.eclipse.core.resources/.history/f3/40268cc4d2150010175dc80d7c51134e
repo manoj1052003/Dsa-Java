@@ -1,0 +1,16 @@
+package com.june19;
+
+public class patterncho {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a = 10;
+		int b = 12;
+		int c = 16;
+		
+		int max = (a>b && a>c)?a:(b>a && b>c)?b:c;
+		System.out.println(max);
+		
+	}
+
+}

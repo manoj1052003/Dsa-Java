@@ -1,0 +1,20 @@
+package com.july24;
+
+public class rec2 {
+	
+	public static int print_num(int num,int sum) {
+		
+		if(num==10) {
+			return (sum+num);     
+		}				
+		return print_num(num+1,sum+num);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 1;
+		int sum = 0;
+		int res = print_num(num,sum);
+		System.out.println(res);
+	}
+}

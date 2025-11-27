@@ -1,0 +1,30 @@
+package com.june;
+
+public class recnum2 {
+	
+	public static int find_digit(int num) {
+		int digit = 0;
+		while(num!=0) {
+			num/=10;
+			digit++;
+		}
+		return digit;
+	}
+	
+	public static int rec_arm(int num, int res,int digit) {
+		if(num==0) {
+			return res;
+		}
+		return rec_arm(num/10,(int)Math.pow(num%10, digit)+res,digit);
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 153;
+		int digit = find_digit(num);
+		int res = rec_arm(num,0,digit);
+		System.out.println(res);
+	}
+
+}

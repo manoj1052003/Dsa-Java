@@ -1,0 +1,19 @@
+package com.indian.cars;
+
+import java.util.Scanner;
+
+public class testuser {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		String choice = sc.next();
+		Engine e = car.carEngine(choice);
+		          //new PetrolEn
+		if(e!=null)
+		{
+			e.startEngine();
+		}
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.basicspro;
+
+public class firdtclass {
+	
+	public static void main(String[] args) {
+		String s = "hello";
+		char [] arr = new char [s.length()];
+	}
+}
+	

@@ -1,0 +1,25 @@
+package com.sepnov;
+
+public class Lastclass {
+
+	public static void main(String[] args) {
+		String day = "monday";
+		switch(day) {
+		case "monday":
+			System.out.println("its 1st day of the week");
+			break;
+		case "tuesday":
+			System.out.println("its second");
+			break;
+		case "thursday":
+			System.out.println("third");
+			break;
+		case "sunday":
+			System.out.println("last");
+			break;
+		default:
+			System.out.println("invld");
+		}
+	}
+
+}

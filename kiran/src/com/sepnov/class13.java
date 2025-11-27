@@ -1,0 +1,36 @@
+package com.sepnov;
+
+public class class13 {
+	
+	public static int fact(int num) {
+		int f = 1;
+		for(int i=1; i<=num; i++) {
+			f*=i;
+		}
+		return f;
+	}
+	
+	public static int krish(int num) {
+		int res = 0;
+		while(num != 0) {
+			int rem = num % 10;
+			res = res + fact(rem);
+			num/=10;
+		}
+		return res;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 146;
+		int res = krish(num);
+		if(num==res) {
+			System.out.println("krishnamurthy");
+		}
+		else {
+			System.out.println("not krishnamurthy");
+		}
+		
+	}
+
+}

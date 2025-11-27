@@ -1,0 +1,13 @@
+package com.csr;
+
+public class operatrs {
+
+	public static void main(String[] args) {
+		// ternary
+		System.out.println("*");
+		
+		
+
+	}
+
+}

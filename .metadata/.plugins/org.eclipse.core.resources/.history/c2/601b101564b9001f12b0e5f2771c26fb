@@ -1,0 +1,51 @@
+package com.sepnov;
+
+import java.util.HashMap;
+
+public class class14 {
+
+	public static void longestsub(String s, int k) {
+		HashMap<Character, Integer> map = new HashMap<>();
+		int i = -1;
+		int j = -1;
+		int len = -1;
+		while (j < s.length()) {
+			while (i < s.length() - 1) {
+				i++;
+				char ch = s.charAt(i);
+				map.put(ch, map.getOrDefault(ch, 0) + 1);
+				if (map.size() < k) {
+					continue;
+				} else if (map.size() == k) {
+					len = Math.max(len, i - j);
+				} else {
+					break;
+				}
+			}
+			while (j < i) {
+				j++;
+				char ch = s.charAt(j);
+				if (map.get(ch) == 1) {
+					map.remove(ch);
+				} else {
+					map.put(ch, map.get(ch) - 1);
+				}
+				if (map.size() > k) {
+					continue;
+				} else {
+					break;
+				}
+			}
+		}
+
+		System.out.println(len);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "aabacbebebe";
+		int k = 3;
+		longestsub(s, k);
+	}
+
+}

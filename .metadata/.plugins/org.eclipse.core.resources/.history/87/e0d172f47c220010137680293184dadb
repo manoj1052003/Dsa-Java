@@ -1,0 +1,24 @@
+package com.sepnov;
+
+import java.util.Arrays;
+
+public class num1 {
+
+	public static void main(String[] args) {
+		int [] arr = {-5,2,7,-4,12};
+		int sum = arr[0];
+		int max = sum;
+		for(int i=1; i<arr.length; i++) {
+			if(sum<0) {
+				sum = 0;
+			}
+			sum+=arr[i];
+			
+			max = Math.max(max, sum);
+		}
+		System.out.println(max);
+		
+
+	}
+
+}

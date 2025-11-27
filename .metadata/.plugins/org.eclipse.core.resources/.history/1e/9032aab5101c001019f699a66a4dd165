@@ -1,0 +1,63 @@
+package com.GeneratePdf.basic;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+import com.itextpdf.text.Element;
+
+import com.itextpdf.text.BaseColor;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Font;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfPTable;
+import com.itextpdf.text.pdf.PdfWriter;
+
+public class FirstTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Document d = new Document();
+		
+		try {
+			FileOutputStream fos = new FileOutputStream("C:\\Users\\hp\\Desktop\\first.pdf");
+			
+			PdfWriter.getInstance(d, fos);
+			
+			Font f = new Font(Font.FontFamily.COURIER,20,Font.BOLD,BaseColor.PINK);
+			
+			Paragraph p = new Paragraph("welcome to whatever",f);
+			
+			p.setAlignment(Element.ALIGN_CENTER);
+			
+			PdfPTable table = new PdfPTable(2);
+			
+			table.addCell("Hid");
+			table.addCell("Name");
+			table.addCell("1001");
+			table.addCell("chethan");
+			
+			d.open();
+			p.setSpacingAfter(15f);
+			table.setSpacingBefore(15f);
+			
+			d.add(p);
+			d.add(table);
+			
+			d.close();
+			
+			System.out.println("download aagide guru");
+			
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (DocumentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+
+	}
+
+}

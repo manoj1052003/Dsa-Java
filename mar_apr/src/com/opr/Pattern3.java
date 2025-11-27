@@ -1,0 +1,55 @@
+package com.opr;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Pattern3 {
+	
+	public static char [] conv_stringtoarr(String s) {
+		char [] arr = new char[s.length()];
+		 for(int i=0; i<s.length(); i++) {
+			 arr[i] = s.charAt(i);
+		 }
+		 
+		 return arr;
+	}
+	
+	public static String conv_upper(String s) {
+		String res = "";
+		 for(int i=0; i<s.length(); i++) {
+			 char ch = s.charAt(i);
+			 if(ch>=97 && ch<=122) {
+				 res+=ch;
+				 
+				
+			 }
+			 else {
+				 res+=(char)(ch+32);
+			 }
+		 }
+		 return res;
+	}
+	
+	
+	public static boolean isEquals(char [] arr1, char [] arr2) {
+		if(arr1.length!= arr2.length) {
+			return false;
+		}
+		for(int i=0 ; i<arr1.length; i++) {
+			if(arr1[i] != arr2[i]) {
+				return false;
+			}
+			//------>
+		}
+		return true;
+	}
+	
+	 public static void main(String[] args) {
+		 //s.toCharArray();
+		 Scanner sc = new Scanner(System.in);
+		 char [] arr1 = {};
+		 char [] arr2 = {};
+		 System.out.println(isEquals(arr1,arr2));
+	}
+
+}

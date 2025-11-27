@@ -1,0 +1,26 @@
+package com.novdec.array;
+
+public class subbruteforce {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [] arr = {5,8,-12,14,7,-9,6,9};
+		int k =3;
+		int sum = 0;
+		for(int i=0; i<k; i++) {
+			sum+=arr[i];
+		}
+		int max_sum=sum;
+		for (int i=0; i<=arr.length-k; i++) {
+			sum=0;
+			for(int j=i; j<i+k; j++) {
+				sum+=arr[j];
+			}
+			//System.out.println(sum);
+			max_sum=Math.max(max_sum,sum);
+			
+		}
+		System.out.println(max_sum);
+	}
+
+}

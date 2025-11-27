@@ -1,0 +1,26 @@
+package com.opr;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class may1 {
+
+	public static void main(String[] args) {
+		HashMap<String, Integer> map= new HashMap<>();
+		map.put("nikhil", 2);
+		map.put("hello", 5);
+		System.out.println(map);
+		
+//		for(String key:map.keySet()) {
+//			System.out.println(key+" "+map.get(key));
+//		}
+		
+		for(Map.Entry<String, Integer> mp: map.entrySet()) {
+			System.out.println(mp.getKey());
+			
+		}
+		map.remove("nikhil");
+		System.out.println(map);
+	}
+
+}

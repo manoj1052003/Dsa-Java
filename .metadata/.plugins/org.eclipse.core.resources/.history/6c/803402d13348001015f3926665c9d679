@@ -1,0 +1,43 @@
+package com.numbers;
+
+import java.util.Arrays;
+
+public class classmeth {
+	
+	public static void b_sort(char [] arr) {
+		for(int i=0; i<arr.length; i++) {
+			for(int j=0; j<arr.length-1; j++) {
+				if(arr[j] > arr[j+1]) {
+					char temp = arr[j];
+					arr[j] = arr[j+1];
+					arr[j+1] = temp;
+				}
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s1 = "CAT";  
+		String s2 = "act"; 
+		
+		String ls1 = s1.toLowerCase();
+		String ls2 = s2.toLowerCase();
+		
+		char [] arr1 = ls1.toCharArray();
+		char [] arr2 = ls2.toCharArray();
+		
+		
+		b_sort(arr1);
+		b_sort(arr2);
+		
+		
+		if(Arrays.equals(arr1, arr2)) {
+			System.out.println("anagram");
+		}
+		else {
+			System.out.println("not");
+		}
+			
+	}
+}

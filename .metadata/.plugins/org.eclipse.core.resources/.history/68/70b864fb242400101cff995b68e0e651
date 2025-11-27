@@ -1,0 +1,14 @@
+package com.sepnov;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class num1 {
+
+	public static void main(String[] args) {
+		String s = "hello";
+		System.out.println(s.charAt(1));
+		
+	}
+
+}

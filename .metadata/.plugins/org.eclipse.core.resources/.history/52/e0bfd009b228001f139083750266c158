@@ -1,0 +1,16 @@
+package com.april;
+
+public class stringpalind {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "hello";
+		String res = "";
+		for(int i=0; i<s.length(); i++) {
+			char c = s.charAt(i);
+			res = c +res;
+		}
+		System.out.println(res);
+	}
+
+}

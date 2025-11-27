@@ -1,0 +1,36 @@
+package com.sepoct;
+import java.util.*;
+public class string2 {
+	
+	public static char [] converttoarray(String s) {
+		char [] arr = new char[s.length()];
+		for(int i=0; i<s.length(); i++) {
+			arr[i] = s.charAt(i);
+		}
+		return arr;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s1 = "silent";
+		String s2 = "listen";
+		
+		
+		char [] arr1 = converttoarray(s1);
+		char [] arr2 = converttoarray(s2);
+		
+		Arrays.sort(arr1);
+		Arrays.sort(arr2);
+		
+		System.out.println(Arrays.toString(arr1));
+		System.out.println(Arrays.toString(arr2));
+		
+		if(Arrays.equals(arr1, arr2)) {
+			System.out.println("anagram");
+		}
+		else {
+			System.out.println("its not");
+		}
+	}
+
+}

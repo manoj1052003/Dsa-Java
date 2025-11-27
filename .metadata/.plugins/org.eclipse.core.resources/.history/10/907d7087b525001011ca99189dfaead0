@@ -1,0 +1,70 @@
+package com.sepnov;
+
+import java.util.Arrays;
+
+public class num1 {
+	
+	public static char [] conv_array(String s) {
+		char [] arr = new char[s.length()];
+		for(int i=0; i<s.length(); i++) {
+			arr[i] = s.charAt(i);
+		}
+		return arr;
+	}
+	
+	public static char [] sort_array(char [] arr) {
+		for(int i=0; i<arr.length; i++) {
+			for(int j=0; j<arr.length-1; j++) {
+				if(arr[j]>arr[j+1]) {
+					char temp = arr[j];
+					arr[j] = arr[j+1];
+					arr[j+1] = temp;
+				}
+			}
+		}
+		return arr;
+	}
+	
+	public static boolean check(char [] arr1, char [] arr2) {
+		if(arr1.length!=arr2.length) {
+			return false;
+		}
+		for(int i=0; i<arr1.length; i++) {
+			if(arr1[i]!=arr2[i]) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public static void main(String[] args) {
+		
+		
+		String s1 = "SiLent";
+		String s2 = "listen";
+		
+		char [] arr1 = conv_array(s1);
+		char [] arr2 = conv_array(s2);
+		
+		char [] sarr1 = sort_array(arr1);
+		char [] sarr2 = sort_array(arr2);
+		
+		System.out.println(Arrays.toString(sarr1));
+		System.out.println(Arrays.toString(sarr2));
+		
+		if(check(sarr1, sarr2)) {
+			System.out.println("its anagram");
+		}
+		else {
+			System.out.println("its not");
+		}
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

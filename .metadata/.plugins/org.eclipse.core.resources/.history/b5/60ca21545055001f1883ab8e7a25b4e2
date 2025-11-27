@@ -1,0 +1,20 @@
+package com.june;
+
+public class fibrec {
+	
+	public static int find_fib(int num) {
+		if (num<=1) {
+			return 1; 
+		}
+		return find_fib(num-1)+find_fib(num-2);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 8;
+		int res = find_fib(num);
+		System.out.println(res);
+		
+	}
+
+}

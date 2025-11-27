@@ -1,0 +1,36 @@
+package com.july24;
+
+public class num3 {
+	
+	public static int c_prime(int num) {
+		int count = 0;
+		for(int i=1; i<=num;i++) {
+			if(num%i==0) {
+				count++;
+			}
+		}
+		return count;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n = 8;
+		int k = 1;
+		for(int i=1; i<=n; i++) {  //1
+			for(int j=1; j<=i; j++) {  //1
+				while(true) {
+					if(c_prime(k)==2) {
+						System.out.print(k+" ");
+						k++;
+						break;
+					}
+					else {
+						k++;
+					}
+				}
+			}
+			System.out.println();
+		}
+	}
+
+}

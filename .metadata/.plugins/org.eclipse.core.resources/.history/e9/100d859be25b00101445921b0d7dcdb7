@@ -1,0 +1,21 @@
+package com.basics;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Class2 {
+
+	public static void main(String[] args) {
+		String s = "pentaGON";
+		int len = s.length();
+		System.out.println(len);
+		String ls = s.toLowerCase();
+		String us = s.toUpperCase();
+//		char ch = s.charAt(4);
+		System.out.println(us);
+//		char [] arr = s.toCharArray();
+//		System.out.println(arr);
+//		System.out.println(Arrays.toString(arr));
+		
+	}
+}

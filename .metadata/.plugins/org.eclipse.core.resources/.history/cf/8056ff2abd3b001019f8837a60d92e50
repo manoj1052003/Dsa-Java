@@ -1,0 +1,22 @@
+package com.recursion;
+
+public class first {
+	
+	public static void print_num(int num, int count) { //23  49
+		if(num == 0) {
+			System.out.println(count);
+			return;
+		}
+		
+		print_num(num-1,count*num);  // 22 72
+		
+		
+	}
+
+	public static void main(String[] args) {
+		int num = 5;
+		int count = 1;
+		print_num(num, count);
+	}
+
+}

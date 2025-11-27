@@ -1,0 +1,39 @@
+package com.basics;
+
+public class Class2 {
+
+//	public static int l_search(int[] arr, int key) {
+//		for (int i = 0; i < arr.length; i++) {
+//			if (arr[i] == key) {
+//				return i;
+//			}
+//			// ----->
+//		}
+//		return -1;
+//	}
+
+//	public static int b_search(int[] arr, int key) {
+//		int low = 0;
+//		int high = arr.length - 1;
+//		while (low <= high) {
+//			int mid = (low + high) / 2;
+//			if (arr[mid] == key) {
+//				return mid;
+//			} else if (key > arr[mid]) {
+//				low = mid + 1;
+//			} else {
+//				high = mid - 1;
+//			}
+//		}
+//		return -1;
+//	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr1 = { 12, 23, 34, 45, 56, 67, 78, 89 };
+		int[] arr2 = { 12, 23, 34, 45, 56, 67, 78, 89 };
+		System.out.println(arr1 == arr2);
+
+	}
+
+}

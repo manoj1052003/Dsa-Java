@@ -1,0 +1,26 @@
+package com.bank.app;
+
+import com.bank.dao.CustomerDAO;
+import com.bank.dao.CustomerDAOimp;
+import com.bank.dto.Customer;
+import com.bank.dto.Transaction;
+
+public class TransferAmount {
+
+	public static void transfer(Customer sender, double amount, long acc_no) {
+		CustomerDAO cdao = new CustomerDAOimp();
+		
+		Transaction t1 = null;
+		Transaction t2 = null;
+		
+		Customer receiver =  cdao.getCustomer(acc_no);
+		
+		if(amount<sender.getBalance() && amount>0 && sender.getAcc_no()!=receiver.getAcc_no()) {
+			sender.setBalance(sender.getBalance()-amount);
+			receiver.setBalance(receiver.getBalance()+amount);
+			cdao.updateCustomer(sender);
+			cdao.updateCustomer(receiver);
+		}
+
+	}
+}

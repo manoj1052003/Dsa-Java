@@ -1,0 +1,39 @@
+package com.numbers;
+
+import java.util.Scanner;
+public class firstnum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print(" entr the number ");
+		
+		int num = scan.nextInt();
+		
+		int ex = num;
+		
+		int res = 0;
+		
+		while(num>0) {
+			
+			int rem = (num % 10);
+					
+			 res = (res * 10) + rem;
+			
+			num = num / 10;
+			
+		}
+		
+		if (ex == res) {
+			
+			System.out.println("its palindrome");
+		}	
+		
+		else {
+			
+			System.out.println("its not");
+		}
+	}
+}

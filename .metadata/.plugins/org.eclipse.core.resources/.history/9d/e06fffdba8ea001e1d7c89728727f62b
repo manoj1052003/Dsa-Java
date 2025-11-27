@@ -1,0 +1,42 @@
+package com.csr;
+
+public class armstrong {
+	public static int find_power(int rem,int digit) {
+		int res = 1;
+		while(digit>0) {
+			res = res * rem;
+			digit--;
+		}
+		return res;
+	}
+	
+	public static int find_digit(int num) {
+		int count = 0;
+		while(num>0) {
+			num=num/10;
+			count++;
+		}
+		return count;
+	}
+	
+	
+	
+	public static int find_armstrong(int num) {
+		int res = 0;
+		int digit = find_digit(num);
+		while(num>0) {
+			int rem=num%10;
+			res=res+find_power(rem,digit);
+			num=num/10;
+		}
+		return res;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 153;
+		int res = find_armstrong(num);
+		System.out.println(res);
+	}
+
+}

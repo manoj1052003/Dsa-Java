@@ -1,0 +1,73 @@
+package com.csll;
+
+class Node{
+	int data;
+	Node next;
+	
+	Node(int data){
+		this.data = data;
+		this.next = null;
+	}
+}
+
+class CLL{
+	
+	Node head;
+	
+	public void add_last(int data) {
+		Node temp = new Node(data);
+		if(head == null) {
+			head = temp;
+			temp.next = head;
+		}
+		else {
+			Node curr = head;
+			while(curr.next != head) {
+				curr = curr.next;
+			}
+			temp.next = head;
+			curr.next = temp;
+		}
+	}
+	
+	public void add_first(int data) {
+		Node temp = new Node(data);
+		if(head == null) {
+			head = temp;
+			temp.next = head;
+		}
+		else {
+			Node curr = head;
+			while(curr.next != head) {
+				curr = curr.next;
+			}
+			temp.next = head;
+			curr.next = temp;
+			head = temp;
+		}
+	}
+	
+	public void print() {
+		Node curr = head;
+		do {
+			System.out.print(curr.data+" ");
+			curr = curr.next;
+		}
+		while(curr != head);
+	}
+}
+
+public class First {
+
+	public static void main(String[] args) {
+		
+		CLL cll = new CLL();
+		cll.add_last(10);
+		cll.add_last(20);
+		cll.add_last(40);
+		cll.add_last(30);
+		cll.add_first(5);
+		cll.print();
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.june;
+import java.util.*;
+
+public class stringbasicc {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "pentagon";
+		System.out.println(s.charAt(2));
+	}
+
+}

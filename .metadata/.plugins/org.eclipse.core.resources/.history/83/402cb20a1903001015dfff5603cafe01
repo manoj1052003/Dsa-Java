@@ -1,0 +1,18 @@
+package com.jan26;
+
+import java.util.HashMap;
+import java.util.HashSet;
+
+public class class14num4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [] arr = {12,23,34,34,23,15,17};
+		HashSet<Integer> set =  new HashSet<>();
+		for(Integer val : arr) {
+			set.add(val);
+		}
+		System.out.println(set);
+	}
+
+}

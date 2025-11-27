@@ -1,0 +1,13 @@
+package com.map;
+
+import java.util.HashMap;
+
+public class Basic {
+
+	public static void main(String[] args) {
+		int [] arr = {12,23,34,43,1,12,12,34,12};
+		
+		
+	}
+
+}

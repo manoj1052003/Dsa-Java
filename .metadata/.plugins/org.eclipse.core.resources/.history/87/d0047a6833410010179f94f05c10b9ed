@@ -1,0 +1,26 @@
+package com.opr;
+
+import java.util.HashMap;
+
+public class patern1 {
+	
+	public static int [] soln(int [] arr, int sum) {
+		
+		HashMap<Integer, Integer> mp = new HashMap<>();
+		
+		for(Integer val : arr) {
+			int target = sum - val;
+			
+			if(mp.containsKey(target)) {
+				return {target,i};
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		int [] arr = {1,5,3,7,9,2};
+		
+
+	}
+
+}

@@ -1,0 +1,25 @@
+package com.sepoct;
+
+public class num5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a = 12;
+		int b = 8;
+		int smlst;
+		int hcf = 0;
+		if(a<b) {
+			smlst = a;
+		}
+		else {
+			smlst = b;
+		}
+		for(int i=1; i<=smlst; i++) {
+			if(a%i==0 && b%i==0) {
+				hcf = i;
+			}
+		}
+		System.out.println(hcf);
+	}
+
+}

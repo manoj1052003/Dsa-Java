@@ -1,0 +1,24 @@
+package july;
+
+public class class2 {
+
+	public static void main(String[] args) {
+		int rows = 5;
+		int n=1;
+		int m=1;
+		for(int i=1; i<=rows; i++) {
+			for(int j=1; j<=i; j++) {
+				
+					System.out.print(m--);
+					n++;
+				}
+			m=n+i;
+			System.out.println();
+				
+			}
+			
+		}
+
+	}
+
+

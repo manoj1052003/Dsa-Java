@@ -1,0 +1,52 @@
+package com.dp;
+
+import java.util.Arrays;
+
+public class class4maxsumofnonadjusent {
+	
+	// brute force approach
+	public static int find_res(int [] arr, int ind) {
+		if(ind == 0) {
+			return arr[ind];
+		}
+		if(ind < 0) {
+			return 0;
+		}
+		int pick = arr[ind] + find_res(arr,ind-2);
+		int n_pick = find_res(arr,ind-1);
+		
+		return Math.max(pick, n_pick);
+	}
+	
+	//memoization
+	public static int find_res1(int [] arr, int ind, int [] dp) {
+		if(ind == 0) {
+			return arr[ind];
+		}
+		if(ind < 0) {
+			return 0;
+		}
+		
+		if(dp[ind] != -1) {
+			return dp[ind];
+		}
+		
+		int pick = arr[ind] + find_res(arr,ind-2);
+		int n_pick = find_res(arr,ind-1);
+		
+		dp[ind] =  Math.max(pick, n_pick);
+		return dp[ind];
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [] arr = {2,1,4,9};
+		int ind = arr.length-1;
+		int [] memo = new int[arr.length];
+		Arrays.fill(memo, -1);
+		int res = find_res1(arr,ind, memo);
+		System.out.println(res);
+		
+	}
+
+}

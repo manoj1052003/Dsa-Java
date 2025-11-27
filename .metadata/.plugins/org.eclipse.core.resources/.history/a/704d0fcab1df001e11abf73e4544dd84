@@ -1,0 +1,25 @@
+package com.csr;
+import java.util.Scanner;
+
+public class operatrs {
+
+	public static void main(String[] args) {
+	
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter no of stars: ");
+		int n = sc.nextInt();
+		int k = 65;
+		
+		for (int i=0; i<n; i++) {
+			for (int j=0; j<=i; j++) {
+				char c=(char)k;
+				System.out.print(c+" ");
+				k++;
+			}
+			System.out.println();
+		}
+			
+	}
+		
+}
+

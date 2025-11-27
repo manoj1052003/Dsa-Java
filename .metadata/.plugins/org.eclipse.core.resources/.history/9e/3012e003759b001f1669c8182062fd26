@@ -1,0 +1,20 @@
+package com.july24;
+
+public class rec2 {
+	
+	public static int print_num(int num,int count) {
+		if(num==0) {
+			return count;
+		}
+		return print_num(num/10,count=count+1);
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 123;
+		int count = 0;
+		int res1 = print_num(num,count);
+		System.out.println(res1);
+	}
+}

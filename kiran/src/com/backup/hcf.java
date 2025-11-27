@@ -1,0 +1,52 @@
+package com.backup;
+
+public class hcf {
+	public static void find_hcf_gabriel(int a, int b) {
+		while(a!=0 && b!=0) {
+			if(a>b) {
+				a=a%b;
+			}
+			else {
+				b=b%a;
+			}
+		}
+		if(a!=0) {
+			System.out.println(a);
+		}
+		else {
+			System.out.println(b);
+		}
+	}
+	public static void find_hcf_euclid(int a,int b) {
+		while(a!=b) {
+			if(a>b) {
+				a=a-b;
+			}
+			else {
+				b=b-a;
+			}
+		}
+		System.out.println(a);
+	}
+	
+	public static void find_hcf(int a,int b) {
+		int smlt = (a<b)?a:b;
+		int cf = 1;
+		for(int i=1; i<=smlt; i++) {
+			if(a%i==0 && b%i==0) {
+				cf=i;
+			}
+		}
+		System.out.println(cf);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a = 173;
+		int b = 133;
+		find_hcf(a,b);
+		find_hcf_euclid(a,b);
+		find_hcf_gabriel(a,b);
+	}
+
+}

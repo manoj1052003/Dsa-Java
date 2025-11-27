@@ -1,0 +1,39 @@
+ package com.numbers;
+
+public class thirdclass {
+	
+	public static int c_digit(int num) {
+		int count = 0;
+		while(num!=0) {
+			num = num/10;
+			count++;
+		}
+		return count;
+	}
+	
+	public static int f_arm(int num) {
+		int res = 0;
+		int digit = c_digit(num);
+		while(num!=0) {
+			int rem = num % 10;
+			res = (int)Math.pow(rem, digit) + res;
+			num = num/10;
+		}
+		return res;
+	}
+	
+
+	
+	public static void main(String[] args) {
+		int num = 152;
+		int res = f_arm(num);
+		if(num==res) {
+			System.out.println("arm");
+		}
+		else {
+			System.out.println("its not");
+		}
+		
+	}
+
+}

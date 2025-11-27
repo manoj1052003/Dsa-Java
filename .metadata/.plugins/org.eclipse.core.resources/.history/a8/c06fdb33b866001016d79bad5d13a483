@@ -1,0 +1,27 @@
+package com.basicop;
+
+public class Class1assign {
+	
+	public static int sum_digits(int num) {
+		int sum = 0;            // num = 0
+		while(num!=0) {         // sum = 61
+			int rem = num % 10;  // rem = 6
+			sum = sum + rem; //
+			num = num / 10;
+		}
+		return sum;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 99;
+		int gnum = num + 1; // 19
+		while(sum_digits(num) * 2 != sum_digits(gnum)) {
+			gnum++;
+		}
+		System.out.println(gnum);
+		
+		
+	}
+
+}

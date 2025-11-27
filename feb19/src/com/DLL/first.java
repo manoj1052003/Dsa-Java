@@ -1,0 +1,149 @@
+package com.DLL;
+
+class Node{
+	int data;
+	Node prev;
+	Node next;
+	
+	Node(int data){
+		this.data = data;
+		this.prev = null;
+		this.next = null;
+	}
+}
+
+class DLinkedList{
+	
+	Node head;
+	Node tail;
+	
+	public void add_last(int data) {
+		Node temp = new Node(data);
+		if(head==null) {
+			head = tail = temp;
+		}
+		else {
+			temp.prev = tail;
+			tail.next = temp;
+			tail = temp;
+		}
+	}
+	
+	public void add_first(int data){
+		Node temp = new Node(data);
+		if(head==null) {
+			head = tail = temp;
+		}
+		else {
+			temp.next = head;
+			head.prev = temp;
+			head = temp;
+		}
+	}
+	
+	public void delete_last() {
+		if(tail == null) {
+			System.out.println("ll is already empty");
+			return;
+		}
+		if(tail.prev == null) {
+			head = null;
+			tail = null;
+		}
+		else {
+			tail = tail.prev;
+			tail.next = null;
+		}
+	}
+	
+	public void delete_first() {
+		if(head == null) {
+			System.out.println("ll is already empty");
+			return;
+		}
+		if(head.next == null) {
+			head = null;
+			tail = null;
+		}
+		else {
+			head = head.next;
+			head.prev = null;
+		}
+	}
+	
+	public void add_at_index(int index, int ele) {
+		if(index < 0 || index > size()) {
+			System.out.println("invalid index");
+			return;
+		}
+		if(index == 0) {
+			add_first(ele);
+		}
+		else if(index == size()) {
+			add_last(ele);
+		}
+		else {
+			Node curr = head;
+			Node temp = new Node(ele);
+			for(int i=0; i<index-1; i++) {
+				curr = curr.next;
+			}
+			Node n_node = curr.next;
+			temp.prev = curr;
+			temp.next = n_node;
+			curr.next = temp;
+			n_node.prev = temp;
+		}
+	}
+	
+	public int size() {
+		int count = 0;
+		Node curr = head;
+		while(curr != null) {
+			curr = curr.next;
+			count++;
+		}
+		return count;
+	}
+	
+	
+	public void printLL() {
+		Node curr = head;
+		while(curr != null) {
+			System.out.print(curr.data+" ");
+			curr = curr.next;
+		}
+		System.out.println();
+	}
+	
+	public void printLLR() {
+		Node curr = tail;
+		while(curr != null) {
+			System.out.print(curr.data+" ");
+			curr = curr.prev;
+		}
+		System.out.println();
+	}
+	
+}
+
+public class first {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		DLinkedList dll = new DLinkedList();
+		dll.add_last(10);
+		dll.add_last(30);
+		dll.add_last(40);
+		dll.add_first(5);
+		dll.printLL();
+		//dll.printLLR();
+		dll.add_at_index(2, 15);
+		dll.printLL();
+		dll.printLLR();
+		
+		
+		 
+	}
+
+}

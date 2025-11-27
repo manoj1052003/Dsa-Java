@@ -1,0 +1,31 @@
+package com.sepnov;
+
+public class class15 {
+	
+	public static void euclid(int a, int b) {
+		while(a!=0 && b!=0) {
+			if(a>b) {
+				a = a % b;
+			}
+			else {
+				b = b % a;
+			}
+		}
+		if(a!=0) {
+			System.out.println(a);
+		}
+		else {
+			System.out.println(b);
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		// O(max(a,b))
+		int a = 25;  
+		int b = 15;  
+		euclid(a,b);
+		
+		
+	}
+}

@@ -1,0 +1,28 @@
+package com.grooming;
+import java.util.*;
+public class hashhhhmapppp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int []  arr = {2,2,3,2};
+		int [] res  =new int[10];
+		for(int val : arr) {
+			if(res[val]==0) {
+				res[val] = 1;
+			}
+			else {
+				res[val]+=1;
+			}
+		}
+		int min = 100;
+		for(int i=0; i<res.length; i++) {
+			if(res[i]>0) {
+				if(res[i]<min) {
+					min = i;
+				}
+			}
+		}
+		System.out.println(min);
+	}
+
+}

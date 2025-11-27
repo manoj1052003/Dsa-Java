@@ -1,0 +1,29 @@
+package com.august;
+
+public class tenthclass {
+	
+	public static int c_factors(int num) {
+		int count = 0;
+		for(int i=1; i<=num;i++) {
+			if(num%i==0) {
+				count++;
+			}
+		}
+		return count;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		for(int i=1; i<=10000; i++) {
+			int num =i;
+			int res = c_factors(num);
+			//System.out.println(res);
+			if(res == 2) {
+				System.out.println(num);
+			}
+		}
+		
+		
+	}
+
+}

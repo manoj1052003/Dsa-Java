@@ -1,0 +1,9 @@
+package com.basic;
+
+public class Secondcls {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

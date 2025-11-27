@@ -1,0 +1,19 @@
+package com.onlinejavapro;
+
+public class class10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a = 18;
+		int b = 12;
+		int s = (a<b)?a:b;
+		int cf = 1;
+		for(int i=1; i<=s; i++) {
+			if(a%i==0 && b%i==0) {
+				cf = i;
+			}
+		}
+		System.out.println(cf);
+	}
+
+}

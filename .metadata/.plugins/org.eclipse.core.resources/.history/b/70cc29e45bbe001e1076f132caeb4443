@@ -1,0 +1,31 @@
+package com.novdec;
+import java.util.Scanner;
+
+public class Methods {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		int max =0 ;
+		int hcf=1;
+		
+		
+		if (a>b) {
+			max=a;
+		}
+		else {
+			max=b;
+		}
+		
+		for (int i = 1; i <= max; i++) {
+			if (a%i==0 && b%i==0) {
+				hcf = i;
+			}
+		}
+		System.out.println(hcf);
+			
+	}
+
+}

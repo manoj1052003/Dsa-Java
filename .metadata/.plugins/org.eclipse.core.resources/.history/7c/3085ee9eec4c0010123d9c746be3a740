@@ -1,0 +1,21 @@
+package com.numbers;
+
+
+public class classmeth { 
+	
+	public static void sum_digit(int a) {//81
+		int res = 0;
+		while(a != 0 ) {
+			int rem = a % 10;
+			res = res + rem;
+			a = a / 10;
+		}
+	}
+	
+	public static void main(String[] args) {
+		int num = 9;
+		int a = (num * num);
+		sum_digit(a);
+		
+	}
+}

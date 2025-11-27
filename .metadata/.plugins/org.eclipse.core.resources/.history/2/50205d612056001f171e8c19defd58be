@@ -1,0 +1,23 @@
+package com.june;
+
+public class recprime {
+	
+	public static boolean check_prime(int num,int i) {
+		if(i==num) {
+			return true;
+		}
+		if(num%i==0) {
+			return false;
+		}
+		return check_prime(num,i+=1);
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 15;
+		boolean res = check_prime(num,2);
+		System.out.println(res);
+	}
+
+}

@@ -1,0 +1,22 @@
+package com.sepnov;
+
+public class class15 {
+	
+	public static void fact(int num,int k) {
+		if(k>num) {
+			return ;
+		}
+		if(num%k==0) {
+			System.out.println(k);
+		}
+		fact(num,k+=1);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 24;
+		fact(num,1);
+		
+	}
+
+}

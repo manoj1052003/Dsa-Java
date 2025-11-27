@@ -1,0 +1,10 @@
+package com.novdec.array;
+
+public class createarray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

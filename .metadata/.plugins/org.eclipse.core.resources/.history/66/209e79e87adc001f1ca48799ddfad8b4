@@ -1,0 +1,30 @@
+package com.novdecnew;
+
+public class class14 {
+	
+	public static int sum_digits(int num) {
+		int res = 0;
+		while(num!=0) {
+			int rem = num % 10;   //1
+			res = rem + res;      //5
+			num = num / 10;       //0
+		}
+		return res;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 14;
+		int num1 = num+1;
+		int res = sum_digits(num);
+		System.out.println(res);
+		//        5 * 2  ==    6
+		while(sum_digits(num)*2!=sum_digits(num1)) {
+			num1++;
+		}
+		System.out.println(num1);
+		
+		
+		
+	}
+
+}

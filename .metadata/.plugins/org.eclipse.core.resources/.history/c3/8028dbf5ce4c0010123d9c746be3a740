@@ -1,0 +1,28 @@
+package com.numbers;
+
+
+public class classmeth {
+	
+	public static void rev(int num) {//123
+		int res = 0;//0
+		while(num!=0) {
+			int rem = num % 10;//3
+			res = (res * 10) + rem;//3
+			num = num / 10;//12
+		}
+		System.out.println(res);
+	}
+	
+	public static void rec_rev(int num,int res) {
+		if(num == 0) {
+			System.out.println(res);
+			return;
+		}
+		rec_rev(num/10, (res * 10) + num%10);
+	}
+	
+	public static void main(String[] args) {
+		int num = 123;
+		rec_rev(num);
+	}
+}

@@ -1,0 +1,22 @@
+package com.patterns;
+
+public class class4 {
+	
+	public static void fss(String s, String res) {
+		if(s.length()==0) {
+			System.out.println("'"+res+"'");
+			return;
+		}
+		fss(s.substring(1),res+s.charAt(0));
+		
+		fss(s.substring(1),res);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "abc";
+		fss(s,"");
+		
+	}
+
+}

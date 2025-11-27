@@ -1,0 +1,28 @@
+package com.july;
+
+public class basic1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int day = 4;
+		switch(day) {
+			case 1:
+				System.out.println("its monday");
+			case 2:
+				System.out.println("its tues");
+			case 3:
+				System.out.println("its wed");
+			case 4:
+				System.out.println("its thur");
+			case 5:
+				System.out.println("its fri");
+			case 6:
+				System.out.println("its sat");
+			case 7:
+				System.out.println("its sun");
+			default:
+				System.out.println("inv");
+		}
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.practice;
+
+public class Card implements Payment{
+
+	@Override
+	public void pay() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

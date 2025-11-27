@@ -1,0 +1,21 @@
+package com.strings;
+
+public class occurence {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "pentagon";
+		String nst = "";
+		int n = s.length();
+		
+		for (int i = 0; i < n; i++) {
+			
+			char c = s.charAt(i);
+			nst = nst + c;
+		}
+		
+		System.out.println(nst);
+
+	}
+
+}

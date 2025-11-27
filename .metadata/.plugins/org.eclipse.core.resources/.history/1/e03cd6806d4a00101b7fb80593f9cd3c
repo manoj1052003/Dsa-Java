@@ -1,0 +1,27 @@
+package com.numbers;
+
+public class classmeth {
+	
+	public static int reverse(int n) {
+		int res = 0;
+		while (n != 0) {
+			int rem = n % 10;
+			res = (res * 10) + rem;
+			n = n / 10;
+		}
+		System.out.println("inside the method "+n);
+		return res;
+	}
+
+	public static void main(String[] args) {
+		int num = 12321;
+		int res = reverse(num);
+		System.out.println("main method "+num);
+		if(num == res) {
+			System.out.println("its palindrome");
+		}
+		else {
+			System.out.println("its not");
+		}
+	}
+}

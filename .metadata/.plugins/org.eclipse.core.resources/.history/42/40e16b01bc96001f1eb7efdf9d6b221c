@@ -1,0 +1,24 @@
+package com.sepoct;
+import java.util.*;
+public class num1 {
+	
+	public static int digit_sqr_sum(int num) {
+		int res = 0;
+		while(num!=0) {
+			int rem = num % 10;
+			res = (rem * rem) + res;
+			num  = num / 10;
+		}
+		return res;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 1606;
+		int res = digit_sqr_sum(num);
+		while(res!=1 && res!=4) {
+			res = digit_sqr_sum(res);
+		}
+		System.out.println(res);
+		
+	}
+}

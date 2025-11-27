@@ -1,0 +1,25 @@
+package com.kiran;
+
+public class nearestpalin {
+	
+	public static int find_ans(int num) {
+		int res = 0;
+		while(num!=0) {
+			int rem = num % 10;
+			res = (res * 10) + rem;
+			num/=10;
+		}
+		return res;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 125;
+		int res = find_ans(num);
+		while(num!=res) {
+			res = find_ans(res+1);
+		}
+		System.out.println(res);
+	}
+
+}

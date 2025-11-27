@@ -1,0 +1,34 @@
+package com.sepnov;
+
+import java.util.Arrays;
+
+public class num1 {
+	
+	public static void find_res(String[] arr) {
+		for(int i=arr.length-1; i>=0; i--) {
+			System.out.print(arr[i]+" ");
+		}
+	}
+	
+	public static String rev(String s) {
+		String res = "";
+		for(int i=s.length()-1; i>=0; i--) {
+			res = res + s.charAt(i);
+		}
+		return res;
+	}
+
+	public static void main(String[] args) {
+
+		String s = "esala cup namde";
+		String [] arr = s.split(" ");
+		for(int i=0; i<arr.length; i++) {
+			System.out.print(rev(arr[i]));
+		}
+		
+		
+	
+
+	}
+
+}

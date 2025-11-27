@@ -1,0 +1,28 @@
+package com.april;
+
+public class primenum {
+	
+	public static void check_prime(int num) {
+		int count=0;
+		for (int i=1;i<=num; i++) {
+			if(num%i==0) {
+				System.out.println(i);
+				count++;
+			}
+		}
+		if(count>2) {
+			System.out.println("its not");
+		}
+		else {
+			System.out.println("its prime");
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 9;
+		check_prime(num);
+
+	}
+
+}

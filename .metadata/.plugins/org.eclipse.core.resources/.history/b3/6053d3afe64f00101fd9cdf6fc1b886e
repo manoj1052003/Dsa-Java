@@ -1,0 +1,8 @@
+package com.numbers;
+
+public class classmeth {
+
+	public static void main(String[] args) {
+		
+	}
+}

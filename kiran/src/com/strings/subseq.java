@@ -1,0 +1,20 @@
+package com.strings;
+
+public class subseq {
+	
+	public static void sss(String s, String ans) {
+		if(s.length()==0) {
+			System.out.println(ans);
+			return;
+		}
+		 sss(s.substring(1),ans+s.charAt(0));
+		 sss(s.substring(1),ans);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s ="abc";
+		sss(s,"");
+	}
+
+}

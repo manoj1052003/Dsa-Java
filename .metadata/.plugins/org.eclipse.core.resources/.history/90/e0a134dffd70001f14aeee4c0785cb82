@@ -1,0 +1,26 @@
+package com.june19;
+
+public class twelethclass {
+	
+	public static int hcf_euclied(int a, int b) {
+		while(a!=b) {
+			if(a>b) {
+				a = a-b;
+			}
+			else {
+				b = b-a;
+			}
+		}
+		return a;
+	}
+
+	public static void main(String[] args) {
+		int a = 100;
+		int b = 1;
+		int res = hcf_euclied(a,b);
+		System.out.println(res);
+		
+
+	}
+
+}

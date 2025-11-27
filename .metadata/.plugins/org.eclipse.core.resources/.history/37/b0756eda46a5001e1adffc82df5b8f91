@@ -1,0 +1,18 @@
+package com.novdec;
+
+public class firstclass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		float num = 20;
+		float sum = 0;
+		for (int i = 1; i <=num; i++) {
+			sum = sum + i;
+		}
+		
+		System.out.println("avg of first "+num+ "natural number is");
+		System.out.println(sum/num);
+		
+	}
+
+}

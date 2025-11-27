@@ -1,0 +1,42 @@
+package com.String.interview;
+
+import java.util.Arrays;
+
+public class class1 {
+
+	public static String reverse(String s) {
+		String res = "";
+		for(int i=s.length()-1; i>=0; i--) {
+			res += s.charAt(i);
+		}
+		return res;
+	}
+	
+	public static String con_upper(String s) {
+		String res = "";
+		for(int i=0; i<s.length(); i++) {
+			char ch = s.charAt(0);
+			if((i==0 && (ch >=97 && ch <=122)) || (i==s.length()-1 && (ch >=97 && ch <=122) )) {
+				int nascii = s.charAt(i) - 32;
+				char nchar = (char)nascii;
+				res = res + nchar;
+			}
+			else {
+				res += s.charAt(i);
+			}
+		}
+		return res;
+		
+	}
+	
+	public static void main(String[] args) {
+		String s = "india is my country";
+		String [] arr = s.split(" ");
+		System.out.println(Arrays.toString(arr));
+		for(int i=0; i<arr.length; i++) {
+			System.out.print(con_upper(arr[i])+" ");
+		}
+
+	}
+
+}

@@ -1,0 +1,42 @@
+package com.novdec.string;
+
+import java.util.*;
+
+import java.util.Stack;
+
+class Solution2 {
+    public String solution2(String S) {
+        Stack<Character> stack = new Stack<>();
+
+        for (char c : S.toCharArray()) {
+            if (!stack.isEmpty() && stack.peek() == c) {
+                stack.pop();
+            } else {
+                stack.push(c);
+            }
+        }
+
+        // Build the result string
+        StringBuilder sb = new StringBuilder();
+        for (char c : stack) {
+            if (sb.length() > 0 && c < sb.charAt(sb.length() - 1)) {
+                sb.setLength(sb.length() - 1); // Remove the last character
+                sb.append(c); // Append the current character
+            } else {
+                sb.append(c); // Append the current character
+            }
+        }
+
+        return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        Solution2 sol = new Solution2();
+        System.out.println(sol.solution2("CBCAAXA")); // Output: "BAX"
+        System.out.println(sol.solution2("ZYXZYZY")); // Output: "XYZ"
+        System.out.println(sol.solution2("ABCBACDDAA")); // Output: ""
+        System.out.println(sol.solution2("AKFKFMOGKFB")); // Output: "AFKMOGB"
+    }
+}
+
+

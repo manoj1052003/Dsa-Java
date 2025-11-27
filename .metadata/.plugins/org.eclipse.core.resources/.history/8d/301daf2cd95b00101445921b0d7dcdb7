@@ -1,0 +1,18 @@
+package com.basics;
+
+public class Class2 {
+
+	public static void main(String[] args) {
+		int rows = 5;
+		int k = 1;
+		int j;
+		for(int i=1; i<=rows; i++) {
+			for(j=1; j<=i; j++) {
+				System.out.print(k+" ");
+				k--;
+			}
+			k=k+i+j+1;
+			System.out.println();
+		}
+	}
+}

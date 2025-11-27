@@ -1,0 +1,36 @@
+package com.backup;
+
+public class substr {
+	public static String reverse(String s) {
+		String res = "";
+		for(int i=0; i<s.length(); i++) {
+			char c = s.charAt(i);
+			res = c + res;
+		}
+		return res;
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "abcd";
+		int len = 0;
+		String lon = "";
+		for(int i = 0; i<s.length(); i++) {
+			String res = "";
+			for(int j=i; j<s.length();j++) {
+				res = res + s.charAt(j);
+				if(res.equals(reverse(res))) {
+					if(res.length()>len) {
+						len=res.length();
+						lon=res;
+					}
+				}
+			}
+		}
+		System.out.println(len);
+		System.out.println(lon);
+		
+	}
+
+}

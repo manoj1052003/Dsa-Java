@@ -1,0 +1,32 @@
+package com.july;
+
+public class happy {
+	
+	static int find_happy(int num) {
+		int res = 0;
+		while(num!=0) {
+			int rem = num % 10;
+			res = (rem * rem) + res;
+			num = num / 10;
+		}
+		return res;
+	}  
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 7;
+		int res = find_happy(num);
+		//System.out.println(res);
+		while(res!=1 && res!=4) {
+			find_happy(res);
+		}
+		if(res==1) {
+			System.out.println("its happy");
+		}
+		else {
+			System.out.println("its not");
+		}
+		
+	}
+
+}

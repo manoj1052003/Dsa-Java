@@ -1,0 +1,14 @@
+package com.basic;
+
+public class Logicalopr {
+	
+	
+	
+	 
+	public static void main(String[] args) {
+	
+		String s = "pentagon";
+		
+	}
+
+}

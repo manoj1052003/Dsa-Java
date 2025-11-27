@@ -1,0 +1,22 @@
+package com.june;
+
+public class arr4 {
+
+	public static int l_search(int [] arr, int key) {
+		for(int i=0; i<arr.length; i++) {
+			if(arr[i]==key) {
+				return i;
+			}
+		}
+		return -1;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [] arr = {12,23,34,45,56,67,78};
+		int key = 56;
+		int ind = l_search(arr,key);
+		System.out.println(ind);
+	}
+
+}

@@ -1,0 +1,22 @@
+package com.june;
+
+public class num4 {
+	
+	public static int count_digit(int num) {
+		int count = 0;
+		while(num!=0) {
+			num/=10;
+			count++;
+		}
+		return count;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 1634;
+		int count = 0;
+		int digit = count_digit(num);
+		System.out.println(digit);
+	}
+
+}

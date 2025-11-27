@@ -1,0 +1,42 @@
+package com.stack;
+import java.util.*;
+
+class stack{
+	int top;
+	ArrayList al;
+	
+	stack(){
+		this.top = -1;
+		this.al = new ArrayList<Integer>();
+	}
+	void push(int element) {
+		top++;
+		this.al.add(element);
+		
+	}
+	
+	int pop() {
+		int LastIndex = this.al.size()-1;
+		int t = (Integer)this.al.get(LastIndex);
+		this.al.remove(LastIndex);
+		return t;
+	}
+}
+
+
+public class stack1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		stack mystack = new stack();
+		mystack.push(10);
+		mystack.push(20);
+		mystack.push(30);
+		mystack.push(40);
+		mystack.pop();
+		mystack.pop();
+		mystack.pop();
+		mystack.pop();
+	}
+
+}

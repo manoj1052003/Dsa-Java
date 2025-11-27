@@ -1,0 +1,78 @@
+package com.slinkedlist;
+
+
+class Node{
+	int data;
+	Node next;
+	
+	public Node(int data) {
+		this.data = data;
+		this.next = null;
+	}
+}
+
+class Linked_list{
+	
+	Node head;
+	
+	public void print_LL() {
+		if(head == null) {
+			System.out.println("ll is empty");
+		}
+		else {
+			Node curr = head;
+			while(curr != null) {
+				System.out.print(curr.data+" ");
+				curr = curr.next;
+			}
+		}
+		System.out.println();
+		
+	}
+	
+	public void add(int ele) {
+		Node temp = new Node(ele);
+		if(head == null) {
+			head = temp;
+		}
+		else {
+			Node curr = head;
+			while(curr.next != null) {
+				curr = curr.next;
+			}
+			curr.next = temp;
+		}
+	}
+	
+	public void add_first(int ele) {
+		Node temp = new Node(ele);
+		temp.next = head;
+		head = temp;
+		
+	}
+	
+	public void size() {
+		Node curr = head;
+		int count = 0;
+		while(curr!=null) {
+			count++;
+			curr = curr.next;
+		}
+		System.out.println(count);
+	}
+	
+}
+
+public class First {
+	
+	public static void main(String[] args) {
+		Linked_list ll = new Linked_list();
+		ll.add(30);
+		ll.add(40);
+		ll.add(50);
+		ll.add(60);
+		//ll.print_LL();
+		ll.size();
+		
+	}
+}

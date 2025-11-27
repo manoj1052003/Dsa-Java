@@ -1,0 +1,25 @@
+package com.patterns;
+
+public class class2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i = 1;
+		do {
+			System.out.println("hi");
+			i++;
+		}
+		while(i<=10);
+		
+		
+		System.out.println("----------------------");
+		
+		
+		int j = 1;
+		while(j<=10) {
+			System.out.println("hello");
+			j++;
+		}
+	}
+
+}

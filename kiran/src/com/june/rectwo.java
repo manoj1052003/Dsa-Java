@@ -1,0 +1,37 @@
+package com.june;
+
+public class rectwo {
+	
+	//correct
+	public static int c_digit(int num, int digit) {
+		if(num==0) {
+			return digit;
+		}
+		return c_digit(num/10,digit+=1);
+	}
+	
+	public static int rec_arm(int num,int res, int digit) {
+		if(num==0) {
+			return res;
+		}
+		return rec_arm(num/10,(int)Math.pow((num%10), digit)+res,digit);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 153;
+		int res = 0;
+		int digit = c_digit(num,0);
+		//System.out.println(digit);
+		int ans  = rec_arm( num, res, digit);
+		if(num==ans) {
+			System.out.println("its arms");
+		}
+		else {
+			System.out.println("not");
+		}
+		
+		
+	}
+
+}

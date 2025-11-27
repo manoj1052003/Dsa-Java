@@ -1,0 +1,93 @@
+package com.graph;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
+
+//class AdjMat{
+//	
+//	int Nodes;
+//	int [] [] arr;
+//	
+//	AdjMat(int Nodes) {
+//		arr = new int [Nodes][Nodes];
+//		this.Nodes = Nodes;
+//	}
+//	
+//	public void add_edge(int src, int des) {
+//		arr[src][des] = 1;
+//		arr[des][src] = 1;
+//	}
+//	
+//	public void print() {
+//		for(int i=0; i<arr.length; i++) {
+//			for(int j=0; j<arr.length; j++) {
+//				System.out.print(arr[i][j]+" ");
+//			}
+//			System.out.println();
+//		}
+//	}
+//	
+//}
+
+class AdjList{
+	int Nodes;
+	ArrayList<ArrayList<Integer>> list;
+	AdjList(int Nodes) {
+		list = new ArrayList<>();
+		for(int i=0; i<Nodes; i++) {
+			list.add(new ArrayList<>());
+		}
+	}
+	
+	public void add_edge(int src, int des) {
+		list.get(src).add(des);
+		list.get(des).add(src);
+	}
+	
+	public void print() {
+		for(int i=0; i<list.size(); i++) {
+			System.out.print(i +"--->");
+			System.out.println(list.get(i));
+		}
+	}
+	
+	public void BFS(int root, int nodes) {
+		boolean[] visited = new boolean[nodes];
+		Queue<Integer> q = new LinkedList<>();
+		q.add(root);
+		
+		System.out.println(Arrays.toString(visited));
+		while(!q.isEmpty()) {
+			int val = q.poll();
+			visited[val] = true;
+			System.out.print(val+" ");
+			for(int data : list.get(val)) {
+				if(visited[data] == false) {
+					q.add(data);
+					visited[data] = true;
+				}
+			}
+			
+		}
+	}
+	
+}
+
+public class Second {
+
+	public static void main(String[] args) {
+		AdjList am = new AdjList(6);
+		am.add_edge(0, 1);
+		am.add_edge(0, 2);
+		am.add_edge(1, 3);
+		am.add_edge(1, 4);
+		am.add_edge(2, 4);
+		am.add_edge(4, 5);
+		am.add_edge(3, 5);
+		am.BFS(0,6);
+
+	}
+
+}

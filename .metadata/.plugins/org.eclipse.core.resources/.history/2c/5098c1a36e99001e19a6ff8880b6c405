@@ -1,0 +1,29 @@
+package com.numbers;
+
+import java.util.Scanner;
+public class firstnum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print(" entr the number ");
+		
+		int num = scan.nextInt();
+		
+		int res = 0;
+		
+		while(num>0) {
+			
+			int rem = (num % 10);
+					
+			 res = (res * 10) + rem;
+			
+			num = num / 10;
+			
+		}
+		
+		System.out.println(res);	
+	}
+}

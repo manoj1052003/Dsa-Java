@@ -1,0 +1,36 @@
+package com.basic;
+
+import java.util.Arrays;
+
+public class Class3 {
+
+	public static char[] conv_chararray(String s) {
+		char[] arr = new char[s.length()];
+		for (int i = 0; i < s.length(); i++) {
+			arr[i] = s.charAt(i);
+		}
+		return arr;
+	}
+
+	public static void conv_upper(String s) {
+		String res = "";
+		for (int i = 0; i < s.length(); i++) {
+			char ch = s.charAt(i);
+			if (ch >= 97 && ch <= 122) {
+				System.out.println((char)(ch-32));
+			} else {
+				System.out.println(ch);
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		String s = "PenTAgoN";
+		
+		char ch = s.charAt(1);
+		System.out.println(ch);
+		
+
+	}
+
+}

@@ -1,0 +1,21 @@
+package com.novdec.string;
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class firstpro {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter string:");
+		String s = sc.nextLine();
+		System.out.println(s);
+		for (int i=0; i<s.length(); i++) {
+			char c = s.charAt(i);
+			if(c<=97 && c>=65) {
+				System.out.println(c);
+			}	
+		}
+	}
+
+}

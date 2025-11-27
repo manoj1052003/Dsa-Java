@@ -1,0 +1,17 @@
+package com.csr;
+
+public class operatrs {
+
+	public static void main(String[] args) {
+		// unary
+		int a = 90;
+		int b = 40;
+		int c = 30;
+		int res = (a<b)?(a<c)?a:c:(b<c)?b:c;
+		System.out.println(res);
+		
+		
+
+	}
+
+}

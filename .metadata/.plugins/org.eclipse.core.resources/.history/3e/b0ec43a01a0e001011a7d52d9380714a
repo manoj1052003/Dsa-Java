@@ -1,0 +1,17 @@
+package com.grooming;
+
+import java.util.HashMap;
+
+public class kanini {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [] arr = {12,23,34,12,23,12,12,45,78};
+		HashMap<Integer, Integer> map = new HashMap<>();
+		for( int x:arr) {
+			System.out.println(x);
+		}
+		
+	}
+
+}

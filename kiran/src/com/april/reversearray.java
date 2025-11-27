@@ -1,0 +1,19 @@
+package com.april;
+import java.util.*;
+
+public class reversearray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [] arr = {-5,6,0,55,100,9,-12};
+		int [] res = new int[arr.length];
+		int k = 0;
+		for (int i=arr.length-1; i>=0; i--) {
+			res[k]=arr[i];
+			k++;
+		}
+		System.out.println(Arrays.toString(arr));
+		System.out.println(Arrays.toString(res));
+	}
+
+}

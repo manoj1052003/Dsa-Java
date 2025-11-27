@@ -1,0 +1,17 @@
+package com.basic;
+
+public class Logicalopr {
+	
+	void print_fact(int n) {
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n = 24;
+		Logicalopr l = new Logicalopr();
+		l.print_fact(n);
+		
+	}
+
+}

@@ -1,0 +1,31 @@
+package com.dp;
+
+import java.util.Arrays;
+
+public class practice {
+	
+	public static int max_sum(int [] arr, int ind, int [] dp) {
+		int prev2 = arr[0];
+		int prev1 = Math.max(arr[0], arr[1]);
+		int curr = 0;
+		for(int i=2; i<=ind; i++) {
+			int pick = arr[i] + prev2;
+			int n_pick = 0 + prev1;
+			curr = Math.max(pick, n_pick);
+			prev2 = prev1;
+			prev1 = curr;
+		}
+		return curr;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [] arr = {2,5,1,9};
+		int ind = arr.length-1;
+		int [] dp = new int [arr.length];
+		Arrays.fill(dp, -1);
+		System.out.println(max_sum(arr,ind,dp)); 
+		
+	}
+
+}

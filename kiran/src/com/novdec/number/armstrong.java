@@ -1,0 +1,44 @@
+package com.novdec.number;
+
+public class armstrong {
+	
+	public static int find_digit(int num,int digit) {
+		if (num==0) {
+			return digit;
+		}
+		return find_digit(num/10,digit+=1);
+	}
+	
+	public static int find_power(int rem, int digit, int res) {
+		if (digit == 0) {
+			return res;
+		}
+		return find_power(rem,digit-=1,(rem*res));
+	}
+	
+	public static int find_armstrong(int num, int res, int digit) {
+		if (num == 0){
+			return res;
+		}
+		return find_armstrong(num/10,find_power(num%10,digit,1)+res,digit);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 153;
+		int res1 = 0;
+		int digit = find_digit(num,0);
+		int res = find_armstrong(num,res1,digit);
+		if (res == num) {
+			System.out.println("its armstrong");
+		}
+		else {
+			System.out.println("its not");
+		}
+		
+		
+		
+
+	}
+
+}

@@ -1,0 +1,39 @@
+package com.jan26;
+
+import java.util.Arrays;
+
+import com.csr.arr1;
+
+public class class14num4 {
+	
+	public static void max_sum_sub(int [] arr) {
+		int max = arr[0];
+		int start = 0;
+		int end = 0;
+		for(int i=0; i<arr.length; i++) {
+			for(int j=i; j<arr.length; j++) {
+				int sum = 0;
+				for(int k=i; k<=j; k++) {
+					sum+=arr[k];
+				}
+				if(sum > max) {
+					max = sum;
+					start = i;
+					end = j;
+				}
+			}
+		}
+		System.out.println(max);
+		for(int i=start; i<=end; i++) {
+			System.out.print(arr[i]+" ");
+		}
+	}
+	
+	public static void main(String[] args) {
+		int [] arr1 = {-6,5,-4,7,-3};
+		max_sum_sub(arr1);
+		
+		
+	}
+
+}

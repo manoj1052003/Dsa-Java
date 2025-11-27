@@ -1,0 +1,24 @@
+package test;
+
+import java.util.*;
+
+public class SkipString {
+	
+	static String skipwrd(String[] s1, String skip, int i, String res) {
+		if(i == s1.length) {
+			return res;
+		}
+		if(s1[i] != skip) {
+			res += s1[i];
+		}
+		return skipwrd(s1, skip, (i+1), res);
+	}
+
+	public static void main(String[] args) {
+		
+		String s1 = "apple is red apple is round";
+		String[] al1 = s1.split(" ");
+		System.out.println(skipwrd(al1, "apple", 0, ""));
+	}
+
+}

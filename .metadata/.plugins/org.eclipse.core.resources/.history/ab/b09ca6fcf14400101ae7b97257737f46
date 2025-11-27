@@ -1,0 +1,15 @@
+package com.opr;
+
+import java.util.Arrays;
+
+public class Pattern3 {
+
+	public static void main(String[] args) {
+		int r = 5;
+		int c = 5;
+		int [][] arr = new int [r][c];
+		System.out.println(Arrays.deepToString(arr));
+
+	}
+
+}

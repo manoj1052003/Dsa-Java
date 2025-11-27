@@ -1,0 +1,22 @@
+package com.august;
+import java.util.*;
+public class anagram {
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "madam";
+		String res = "";
+		for(int i=0; i<s.length(); i++) {
+			char ch = s.charAt(i);
+			res = ch + res;
+		}
+		System.out.println(res);
+		if(s.equals(res)) {
+			System.out.println("palindrome");
+		}
+		else {
+			System.out.println("its not");
+		}
+	}
+}

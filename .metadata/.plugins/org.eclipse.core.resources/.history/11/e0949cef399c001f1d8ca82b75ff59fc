@@ -1,0 +1,17 @@
+package com.july24;
+import java.util.*;
+public class array1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr = new int[5];
+		int k =10;
+		for(int i=0; i<=arr.length-1; i++) {
+			arr[i] = k;
+			k= k+ 10;
+		}
+		System.out.println(Arrays.toString(arr));
+		
+	}
+
+}

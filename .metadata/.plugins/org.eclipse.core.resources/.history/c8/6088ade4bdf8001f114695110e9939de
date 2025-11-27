@@ -1,0 +1,12 @@
+package com.jan26;
+
+public class class4patt2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		for(int i=1; true ; i++) {
+			System.out.println(i);
+		}
+	}
+
+}

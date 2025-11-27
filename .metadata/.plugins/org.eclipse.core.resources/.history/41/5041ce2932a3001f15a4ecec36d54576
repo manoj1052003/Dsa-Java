@@ -1,0 +1,15 @@
+package oct9;
+
+public class class1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a = 45;
+		int b = 30;
+		int c = 35;
+		int max = (a > b) ? (a > c) ? a : c : (b > c) ? b : c;
+		System.out.println(max);
+		
+		
+	}
+}

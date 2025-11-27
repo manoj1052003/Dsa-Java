@@ -1,0 +1,26 @@
+package com.sepnov;
+
+public class class3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int per = 94;
+		if(per >= 85) {
+			System.out.println("dist");
+		}
+		else if(per >= 60) {
+			System.out.println("fist");
+		}
+		else if(per >= 45) {
+			System.out.println("second");
+		}
+		else if(per >= 35) {
+			System.out.println("just pass");
+		}
+		else {
+			System.out.println("just fail");
+		}
+		
+	}
+
+}

@@ -1,0 +1,35 @@
+package com.basics;
+
+public class Class2 {
+
+	public static int count_digit(int num) {
+		int digit = 0;
+		while (num != 0) {
+			num /= 10;
+			digit++;
+		}
+		return digit;
+	}
+
+	public static int arm(int num) {
+		int res = 0;
+		int digit = count_digit(num);
+		while (num != 0) {
+			int rem = num % 10;
+			res = (int) Math.pow(rem, digit) + res;
+			num /= 10;
+			digit--;
+		}
+		return res;
+	}
+
+	public static void main(String[] args) {
+		int num = 153;
+		int res = arm(num);
+		if (num == res) {
+			System.out.println("its arm");
+		} else {
+			System.out.println("its not");
+		}
+	}
+}

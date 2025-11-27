@@ -1,0 +1,39 @@
+package com.april;
+
+public class armstrong {
+	public static int find_digit(int num) {
+		int count= 0;
+		while(num>0) {
+			num=num/10;
+			count++;
+		}
+		return count;
+	}
+	
+	
+	public static int check_armstrong(int num) {
+		int res = 0;
+		int digit = find_digit(num);
+		while(num>0) {
+			int rem = num % 10;
+			res = (int)Math.pow(rem, digit)+res;
+			num = num / 10;
+			digit--;
+		}
+		return res;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 125;
+		int res = check_armstrong(num);
+ 		if(res==num) {
+			System.out.println("Armstrong");
+		}
+		else {
+			System.out.println("its not");
+		}
+		
+	}
+
+}

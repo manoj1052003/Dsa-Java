@@ -1,0 +1,67 @@
+package com.stack;
+
+class Node{
+	int data;
+	Node next;
+	
+	Node(int data){
+		this.data = data;
+		this.next = null;
+	}
+}
+
+class LLStack{
+	Node head;
+	
+	public void push(int data) {
+		Node temp = new Node(data);
+		temp.next = head;
+		head = temp;
+		System.out.println(temp.data+ " pushed to stack");
+	}
+	
+	public void pop() {
+		if(head == null) {
+			System.out.println("stack underflow exc");
+			return;
+		}
+		int last = head.data;
+		head = head.next;
+		System.out.println(last + " is popped off");
+	}
+	
+	public void peek() {
+		if(head == null) {
+			System.out.println("stack underflow exc");
+			return;
+		}
+		System.out.println(head.data + "top val from the stack");
+	}
+	
+	public boolean isEmpty() {
+		return head==null;
+	}
+	
+	public void print() {
+		Node curr = head;
+		while(curr != null) {
+			System.out.print(curr.data+" ");
+		}
+		System.out.println();
+	}
+	
+}
+
+
+public class LinkedListStack {
+
+	public static void main(String[] args) {
+		LLStack lls = new LLStack();
+		lls.push(10);
+		lls.push(20);
+		lls.push(30);
+		lls.pop();
+
+	}
+
+}

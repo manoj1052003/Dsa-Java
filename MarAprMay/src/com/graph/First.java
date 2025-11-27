@@ -1,0 +1,67 @@
+package com.graph;
+
+import java.util.ArrayList;
+
+import com.Stack.StackArry;
+
+class AdjMat{
+	
+	int [][] arr;
+	
+	AdjMat(int Nodes) {
+		arr = new int[Nodes][Nodes];
+	}
+	
+	public void con_nodes(int src, int des) {
+		arr[src][des] = 1;
+		arr[des][src] = 1;
+	}
+	
+	public void print() {
+		for(int i=0; i<arr.length; i++) {
+			for(int j=0; j<arr.length; j++) {
+				System.out.print(arr[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+}
+
+class AdjList{
+	int Nodes;
+	ArrayList<ArrayList<Integer>> list;
+	AdjList(int Nodes) {
+		this.Nodes = Nodes;
+		list = new ArrayList<>();
+		for(int i=0; i<Nodes; i++) {
+			list.add(new ArrayList<>());
+		}
+	}
+	
+	public void con_nodes(int src, int des) {
+		list.get(src).add(des);
+		list.get(des).add(src);
+	}
+	
+	public void print() {
+		for(int i=0; i<list.size(); i++) {
+			System.out.print(i+"-->");
+			System.out.println(list.get(i));
+		}
+	}	
+}
+
+public class First {
+
+	public static void main(String[] args) {
+		AdjList am = new AdjList(6);
+		am.con_nodes(0, 1);
+		am.con_nodes(0, 2);
+		am.con_nodes(1, 3);
+		am.con_nodes(1, 4);
+		am.con_nodes(2, 4);
+		am.con_nodes(3, 5);
+		am.con_nodes(4, 5);
+		am.print();
+	}
+}

@@ -1,0 +1,20 @@
+package com.jan26;
+
+public class class9patt6 {
+	
+	public static void print_name(int num) {
+		if(num==10) {
+			System.out.println("CSK");
+		}
+		System.out.println("RCB");
+		print_name(num-1);
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			print_name(1);
+		
+	}
+
+}

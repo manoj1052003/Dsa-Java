@@ -1,0 +1,15 @@
+package com.basic;
+
+import java.util.Scanner;
+
+public class Class3 {
+
+	public static void main(String[] args) {
+		
+		String s = "pentagon";
+		System.out.println(s.charAt(2));
+		
+		
+	}
+
+}

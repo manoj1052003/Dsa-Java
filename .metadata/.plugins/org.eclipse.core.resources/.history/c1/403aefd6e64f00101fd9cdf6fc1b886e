@@ -1,0 +1,15 @@
+package com.numbers;
+
+public class classmeth {
+
+	public static void main(String[] args) {
+		int a = 24;
+		int b = 12;
+		int smlst = (a>b)?b:a;
+		for(int i=1; i<=smlst; i++) {
+			if(a%i==0 && b%i==0) {
+				System.out.println(i);
+			}
+		}
+	}
+}

@@ -1,0 +1,54 @@
+package com.student.app;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import jakarta.servlet.GenericServlet;
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import jakarta.servlet.annotation.WebServlet;
+@WebServlet(urlPatterns =  "/login", loadOnStartup = 3)
+
+public class login extends GenericServlet {
+	//instantiation
+	public login() {
+		System.out.println("server object created");
+	}
+	
+	@Override
+	
+	// initialization phase
+	public void init(ServletConfig config) throws ServletException {
+		
+		System.out.println("servlet object configured");
+	}
+	
+
+	@Override
+	public void service(ServletRequest req, ServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		String mail = req.getParameter("mail");
+		String pass = req.getParameter("password");
+		
+		PrintWriter pw =  resp.getWriter();
+		
+		System.out.println("mail : " + mail + "password : " + pass);
+		String [] arr = mail.split("@");
+
+		pw.println("welcome : " + arr[0]);
+		
+		
+	}
+	
+	@Override
+	
+	//destruction phase
+	public void destroy() {
+		
+		System.out.println("object destroyed");
+	}
+	
+	
+}

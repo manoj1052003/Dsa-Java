@@ -1,0 +1,23 @@
+package com.sepnov;
+
+public class class15 {
+	
+	public static void p_fact(int num, int i) {
+		if(i>num) {
+			return;
+		}
+		if(num%i==0) {
+			System.out.println(i);
+		}
+		p_fact(num,i+=1);
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 24;
+		int i = 1;
+		p_fact(num,i);
+		
+		
+	}
+}

@@ -1,0 +1,12 @@
+package com.june;
+import java.util.*;
+public class splitttt {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "rama is running";
+		String arr [] = s.split(" ");
+		System.out.println(Arrays.toString(arr));
+	}
+
+}

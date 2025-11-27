@@ -1,0 +1,22 @@
+package com.basic;
+
+import java.util.Arrays;
+
+public class Logicalopr {
+	
+
+	public static void main(String[] args) {
+		String s = "malayalam";
+		for(int i=0; i<s.length(); i++) {
+			for(int j=i; j<s.length(); j++) {
+				String res = "";
+				for(int k=i; k<=j; k++) {
+					res+=s.charAt(k);
+				}
+				System.out.println(res);
+			}
+		}
+		
+	}
+
+}

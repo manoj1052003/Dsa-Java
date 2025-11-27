@@ -1,0 +1,21 @@
+package com.bank.app;
+import java.util.Random;
+
+public class TransactionID {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Random rd= new Random();
+		long r = rd.nextLong();
+		//System.out.println(r);
+		if(r<0) {
+			r = r*-1;
+		}
+		int count = 0;
+		while(count<15) {
+			long rem = r%10;
+			
+		}
+	}
+
+}

@@ -1,0 +1,29 @@
+package com.jan26;
+
+public class class9patt6 {
+	
+	public static int count_fact(int num) {
+		int count = 0;
+		for(int i=1; i<=num; i++) {
+			if(num%i==0) {
+				count++;
+			}
+		}
+		return count;
+	}
+	
+	public static void main(String[] args) {
+		int sum = 0;
+		for(int i=1; i<=10; i++) {
+			int num = i;
+			int count = count_fact(num);
+			if(count == 2) {
+				sum= sum + num;
+			}
+			
+		}
+		System.out.println(sum);
+		
+	}
+
+}

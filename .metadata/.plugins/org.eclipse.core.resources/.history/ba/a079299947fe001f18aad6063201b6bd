@@ -1,0 +1,17 @@
+package com.jan26;
+
+import java.util.Arrays;
+
+public class class10basicrec {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//creating array--> directly
+		int [] arr = {12,23,34,45,56,67,78};
+		System.out.println(Arrays.toString(arr));
+		int [] arr2 =  new int[5];
+		System.out.println(Arrays.toString(arr2));
+		
+	}
+
+}

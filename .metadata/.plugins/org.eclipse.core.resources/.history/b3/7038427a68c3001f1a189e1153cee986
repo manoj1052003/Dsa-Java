@@ -1,0 +1,18 @@
+package com.sepnov;
+import java.util.*;
+public class class21 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		String s  = sc.nextLine();
+		String s1 = sc.nextLine();
+		float p = sc.nextFloat();
+		int age = sc.nextInt();
+		System.out.println(s);
+		System.out.println(s1);
+		System.out.println(p);
+		System.out.println(age);
+	}
+
+}

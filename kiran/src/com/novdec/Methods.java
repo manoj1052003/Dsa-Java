@@ -1,0 +1,61 @@
+package com.novdec;
+import java.util.Scanner;
+
+public class Methods {
+	
+	public static int find_hcf(int a, int b) {
+		int max =0 ;
+		int hcf=1;
+		if (a>b) {
+			max=a;
+		}
+		else {
+			max=b;
+		}
+		
+		for (int i = 1; i <= max; i++) {
+			if (a%i==0 && b%i==0) {
+				hcf = i;
+			}
+		}
+		return hcf;
+	}
+	
+	
+	public static int find_lcm(int a, int b) {
+		int min =0 ;
+		int lcm=1;
+		if (a>b) {
+			min=b;
+		}
+		else {
+			min=a;
+		}
+		
+		for (int i = min; i <= (a*b); i++) {
+			if (i%a==0 && i%b==0) {
+				lcm = i;
+				break;
+			}
+		}
+		return lcm;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();	
+		
+		int hcf = find_hcf(a,b);
+		int lcm = find_lcm(a,b);
+		System.out.print("hcf of "+a+" and "+b+" is :");
+		System.out.println(hcf);
+		System.out.print("lcm of "+a+" and "+b+" is :");
+		System.out.println(lcm);
+		
+		sc.close();
+		
+	}
+
+}

@@ -1,0 +1,25 @@
+package com.novdecnew;
+
+import java.util.Arrays;
+
+public class class24 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s1 = "listen";
+		String s2 = "SILenT";
+		
+		String ns1 = s1.toLowerCase();
+		String ns2 = s2.toLowerCase();
+		
+		//System.out.println(ns1);
+		//System.out.println(ns2);
+		
+		char [] arr1 = ns1.toCharArray();
+		char [] arr2 = ns2.toCharArray();
+		
+		System.out.println(Arrays.toString(arr1));
+		System.out.println(Arrays.toString(arr2));
+	}
+
+}

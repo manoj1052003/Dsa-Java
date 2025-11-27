@@ -1,0 +1,38 @@
+package com.jan26;
+
+public class class5patt3 {
+	
+	public static int count_digit(int num) {
+		int count = 0;
+		while(num != 0) {
+			num/=10;
+			count+=1;
+		}
+		return count;
+	}
+	
+	public static int arm(int num) {
+		int res = 0;
+		int digit = count_digit(num);
+		while(num != 0) {
+			int rem = num % 10;
+			res = (int)Math.pow(rem, digit) + res;
+			num/=10;
+		}
+		return res;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 152;
+		int res = arm(num);
+		if(num == res) {
+			System.out.println("ita arm");
+		}
+		else {
+			System.out.println("its not");
+		}
+
+	}
+
+}

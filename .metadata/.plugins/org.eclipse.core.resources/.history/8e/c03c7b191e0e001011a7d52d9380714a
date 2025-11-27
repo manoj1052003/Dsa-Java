@@ -1,0 +1,29 @@
+package com.grooming;
+
+import java.util.HashMap;
+
+public class kanini {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [] arr = {12,23,34,12,23,12,12,45,78};
+		HashMap<Integer, Integer> map = new HashMap<>();
+		for( int x:arr) {
+			if(map.containsKey(x) == true) {
+				map.put(x, map.get(x)+1);
+			}
+			else {
+				map.put(x, 1);
+			}
+		}
+		System.out.println(map);
+		for(Integer key: map.keySet()) {
+			if(map.get(key) == 1) {
+				System.out.println(key);
+			}
+			
+		}
+		
+	}
+
+}

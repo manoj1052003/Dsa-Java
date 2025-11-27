@@ -1,0 +1,58 @@
+package com.tree;
+
+
+class Node{
+	int data;
+	Node left;
+	Node right;
+	Node(int x){
+		this.data = x;
+		this.left = null;
+		this.right = null;
+	}
+}
+public class First {
+	
+	public void pre_order(Node root) {
+		if(root == null) {
+			return ;
+		}
+		System.out.print(root.data+" ");
+		in_order(root.left);
+		in_order(root.right);	
+	}
+	
+	public void in_order(Node root) {
+		if(root == null) {
+			return ;
+		}
+		in_order(root.left);
+		System.out.print(root.data+" ");
+		in_order(root.right);	
+	}
+	
+	public void post_order(Node root) {
+		if(root == null) {
+			return ;
+		}
+		in_order(root.left);
+		in_order(root.right);
+		System.out.print(root.data+" ");
+	}
+	
+	
+
+	public static void main(String[] args) {
+		Node root = new Node(10);
+		root.left = new Node(20);
+		root.right = new Node(30);
+		root.left.left = new Node(40);
+		root.left.left.left = new Node(60);
+		root.left.left.right = new Node(70);
+		root.left.right = new Node(50);
+		First f = new First();
+		f.in_order(root);
+		
+	}
+
+}  

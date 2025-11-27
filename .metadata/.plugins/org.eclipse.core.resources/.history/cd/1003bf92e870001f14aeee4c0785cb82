@@ -1,0 +1,22 @@
+package com.june19;
+
+public class twelethclass {
+
+	public static void main(String[] args) {
+		// HCF
+		int a = 4;
+		int b = 5;
+		int hcf = 1;
+		while(a!=b) {
+			if(a>b) {
+				a=a-b;
+			}
+			else {
+				b=b-a;
+			}
+		}
+		System.out.println(a);
+
+	}
+
+}

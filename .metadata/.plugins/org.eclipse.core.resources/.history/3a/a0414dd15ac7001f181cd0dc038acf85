@@ -1,0 +1,44 @@
+package com.sepnov;
+import java.util.*;
+public class class23 {
+	
+	public static String reverse(String s) {
+		String res = "";
+		for(int i=0 ; i<s.length(); i++) {
+			res = s.charAt(i) + res; 
+		}
+		return res;
+	}
+	
+	public static String c_upper(String s) {
+		String res = "";
+		for(int i=0; i<s.length(); i++) {
+			char c = s.charAt(i);
+			if(i==0 || i==s.length()-1) {
+				int c1 = c - 32;
+				char c2 = (char)c1;
+				res = res + c2;
+			}
+			else {
+				res = res + c;
+			}
+		}
+		return res;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "india is my country";
+		String [] arr = s.split(" ");
+		for(int i=arr.length-1; i>=0; i--) {
+			String val = arr[i];
+			String res = c_upper(val);
+			String res1 = reverse(res);
+			System.out.print(res1+" ");
+		}
+		
+			
+		
+	}
+
+}

@@ -1,0 +1,26 @@
+package com.novdec.array;
+
+public class mergearray {
+	
+	public static void merge(int[] arr1,int[] arr2) {
+		int [] res = new int [arr1.length+arr2.length];
+		int k=0;
+		for (int i = 0; i < arr1.length; i++) {
+			res[k]=arr1[i];
+			k++;
+			res[k]=arr2[i];
+			k++;
+		}
+		for (int i =0; i <res.length;i++) {
+			System.out.println(i+"===>"+res[i]);
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [] arr1= {23,34,45,56,67};
+		int [] arr2= {89,47,29,84,45};
+		merge(arr1,arr2);
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.sepnov;
+
+public class class2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a = 40;
+		int b = 20;
+		int c = 30;
+		int res = (a>b)?(a>c)?a:c:(b>c)?b:c;
+		System.out.println(res);
+	}
+
+}

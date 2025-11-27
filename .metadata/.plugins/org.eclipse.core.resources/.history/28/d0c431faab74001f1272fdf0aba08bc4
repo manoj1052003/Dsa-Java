@@ -1,0 +1,26 @@
+package com.june19;
+
+public class thirteen {
+	
+	public static void rec_fibo(int num,int a, int b) {
+		if(num==0) {
+			return;
+		}
+		System.out.println(a);
+		rec_fibo(num-1, b, a+b);
+		
+		
+	}
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 8;
+		int a = 0;
+		int b = 1;
+		rec_fibo(num,a,b);
+		
+		
+	}
+
+}

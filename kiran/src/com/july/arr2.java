@@ -1,0 +1,32 @@
+package com.july;
+
+public class arr2 {
+	
+	public static int b_search(int [] arr, int key) {
+		int low = 0;
+		 int high = arr.length-1;
+		 while(low<=high) {
+			 int mid = (low+high)/2;
+			 if(arr[mid] == key) {
+				 return mid;
+			 }
+			 else if(key<arr[mid]) {
+				 low = mid + 1;
+			 }
+			 else {
+				 high = mid - 1;
+			 }
+		 }
+		 return -1;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [] arr = {29,26,23,18,15,12,8,4,2};
+		int key = 4;
+		int ind = b_search(arr ,key);
+		System.out.println(ind);
+		
+	}
+
+}

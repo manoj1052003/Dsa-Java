@@ -1,0 +1,19 @@
+package com.csr;
+import java.util.Scanner;
+
+public class operatrs {
+
+	public static void main(String[] args) {
+	
+	 //int a = 10;
+	 //int b = 20;
+	 String a ="rama";
+	 String b ="rama";
+	 System.out.println(a.equals(b));
+	 System.out.println(a==b);
+	 
+	 
+	}
+		
+}
+

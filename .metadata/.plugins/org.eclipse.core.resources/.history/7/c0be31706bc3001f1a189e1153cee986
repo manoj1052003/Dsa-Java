@@ -1,0 +1,12 @@
+package com.sepnov;
+import java.util.*;
+public class class21 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "hello";
+		char [] arr = s.toCharArray();
+		System.out.println(arr[1]);
+	}
+
+}

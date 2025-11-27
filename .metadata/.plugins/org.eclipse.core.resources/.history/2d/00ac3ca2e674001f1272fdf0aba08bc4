@@ -1,0 +1,12 @@
+package com.june19;
+import java.util.*;
+public class arr1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 7;
+		int [] arr = new int[num];
+		System.out.println(Arrays.toString(arr));
+	}
+
+}

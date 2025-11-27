@@ -1,0 +1,71 @@
+package com.basic;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Class3 {
+
+	public static char[] conv_chararray(String s) {
+		char[] arr = new char[s.length()];
+		for (int i = 0; i < s.length(); i++) {
+			arr[i] = s.charAt(i);
+		}
+		return arr;    
+	}
+
+	public static String conv_upper(String s) {
+		String res = "";
+		for (int i = 0; i < s.length(); i++) {
+			char ch = s.charAt(i);
+			if (ch >= 97 && ch <= 122) {
+				res += ((char)(ch-32));
+			} else {
+				res += (ch);
+			}
+		}
+		return res;
+	}
+	
+	public static void b_sort(char [] arr) {
+		for(int i=0; i<arr.length; i++) {
+			for(int j=0; j<arr.length-1; j++) {
+				if(arr[j] > arr[j+1]) {
+					char temp = arr[j];
+					arr[j] = arr[j+1];
+					arr[j+1] = temp;
+				}
+			}
+		}
+		System.out.println(Arrays.toString(arr));
+	}
+
+	public static void main(String[] args) {
+		String s1 = "Listen";  
+		String s2 = "silent"; 
+		
+		String a = s1.toLowerCase();
+		String b = s2.toLowerCase();
+		
+		char [] arr1 = a.toCharArray();
+		char [] arr2 = b.toCharArray();
+		
+		Arrays.sort(arr1);
+		Arrays.sort(arr2);
+		
+		if(Arrays.equals(arr1, arr2)) {
+			System.out.println("its anagram");
+		}
+		else {
+			System.out.println("it not");
+		}
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

@@ -1,0 +1,23 @@
+package com.jan26;
+
+public class class16num6 {
+	
+	public static int find_ans(int num) {
+		int res = 0;
+		while(num!=0) {
+			int rem = num % 10;
+			res = (rem * rem) + res;
+			num = num / 10;
+		}
+		return res;
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 61;
+		int res = find_ans(num);
+		System.out.println(res);
+	}
+
+}

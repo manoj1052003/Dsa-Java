@@ -1,0 +1,15 @@
+package com.list;
+import java.util.*;
+
+public class removeduplicates {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr= {10,20,30,40,50,30,20,20};
+		Arrays.sort(arr);
+		System.out.println(Arrays.toString(arr));
+		
+
+	}
+
+}

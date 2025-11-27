@@ -1,0 +1,29 @@
+package com.sepnov;
+
+public class Lastclass {
+	
+	
+	public static void find_ans(String s) {
+		for(int i=0; i<s.length(); i+=2) {
+			char ch = s.charAt(i+1);
+			int num = Character.getNumericValue(ch);
+			System.out.println(num);
+			while(ch!=0) {
+				System.out.println(s.charAt(i));
+				ch--;
+			}
+			break;
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		String s = "a2b5c3";
+		find_ans(s);
+		
+		
+		
+
+	}
+
+}

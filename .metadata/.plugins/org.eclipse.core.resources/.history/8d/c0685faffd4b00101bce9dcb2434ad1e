@@ -1,0 +1,26 @@
+package com.numbers;
+
+
+public class classmeth {
+	
+	public static int count_digit(int num) {
+		int count = 0;
+		while(num != 0 ) {
+			num/=10;
+			count++;
+		}
+		return count;
+	}
+	
+
+	public static void main(String[] args) {
+		
+		int num = 153;
+		int digit = count_digit(num);
+		System.out.println(digit);
+		
+	
+		
+		
+	}
+}

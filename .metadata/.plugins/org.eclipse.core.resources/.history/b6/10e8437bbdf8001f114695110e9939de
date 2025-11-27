@@ -1,0 +1,14 @@
+package com.jan26;
+
+public class class4patt2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a = 10;
+		int b = 20;
+		int c = 15;
+		int max = (a > b) ? (a > c) ? a : c : (b > c) ? b : c ;
+		System.out.println(max);
+	}
+
+}

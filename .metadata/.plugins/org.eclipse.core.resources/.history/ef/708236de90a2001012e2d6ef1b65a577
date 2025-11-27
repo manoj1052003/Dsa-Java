@@ -1,0 +1,25 @@
+package com.graph;
+
+
+class AdjMat{
+	int Nodes;
+	int [][] arr;
+	
+	AdjMat(int Nodes) {
+		this.Nodes = Nodes;
+		arr = new int [Nodes][Nodes];
+	}
+	
+	public void AddEdge(int start, int end) {
+		arr[start][end] = 1;
+	}
+}
+
+public class First {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

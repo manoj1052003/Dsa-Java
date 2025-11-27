@@ -1,0 +1,57 @@
+package com.SLinkedList;
+
+class Node{
+	int data;
+	Node next;
+	
+	Node(int data){
+		this.data = data;
+		this.next = null;
+	}
+}
+
+class LinkedList{
+	static Node head;
+	static Node curr = head;
+	public static void add(int data) {
+		Node temp = new Node(data);
+		Node curr = head;
+		if(head == null) {
+			head = temp;
+		}
+		else {
+			while(curr.next!=null) {
+				curr = curr.next;
+			}
+			curr.next = temp;
+		}
+	}
+	
+	public static void print_LL() {
+		curr = head;
+		if(head==null) {
+			System.out.println("LL is empty");
+		}
+		else {
+			while(curr!=null) {
+				System.out.println(curr.data);
+				curr = curr.next;
+			}
+		}
+	}
+}
+
+public class reverselinkedlist {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LinkedList ll = new LinkedList();
+		LinkedList.add(10);
+		LinkedList.add(20);
+		LinkedList.add(30);
+		LinkedList.add(40);
+		LinkedList.print_LL();
+		
+	}
+
+}

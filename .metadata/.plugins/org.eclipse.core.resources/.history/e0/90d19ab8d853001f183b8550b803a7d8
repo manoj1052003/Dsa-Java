@@ -1,0 +1,72 @@
+package com.july;
+
+public class firstfiftpri {
+	
+	public static void print_pat1() {
+		int rows = 5;
+		int k = 0;
+		int a = 65;
+		for(int i=1; i<=rows; i++) {
+			for(int j=1; j<=i; j++) {
+				if(k%2==0) {
+					System.out.print((char)a+" ");
+				}
+				else {
+					System.out.print((char)a+" ");
+				}
+				k++;
+				a++;
+			}
+			System.out.println();
+		}
+	}
+	
+	public static void print_pat() {
+		int rows = 5;
+		int k = 0;
+		for(int i =1; i<=rows; i++) {
+			for(int j=1; j<=rows-i; j++) {
+				System.out.print(" "+" ");
+			}
+			for(int j=1; j<=i; j++) {
+				System.out.print(k%3+" ");
+				k++;
+			}
+			System.out.println();
+		}
+	}
+	
+	public static int c_fact(int num) {
+		int c = 0;
+		for(int i=1; i<=num; i++) {
+			if(num%i==0) {
+				c++;
+			}
+		}
+		return c;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		print_pat1();
+		
+		
+//		int num = 2;
+//		int count = 0;
+//		int sum = 0;
+//		while(count!=15) {
+//			int fact = c_fact(num);
+//			if(fact == 2) {
+//				sum+=num;
+//				count++;
+//			}
+//			num++;
+//		}
+//		System.out.println(sum);
+		
+		
+		
+		
+	}
+
+}

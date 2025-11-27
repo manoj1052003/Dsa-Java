@@ -1,0 +1,13 @@
+package com.basics;
+
+import java.util.Arrays;
+
+public class Class2 {
+
+	public static void main(String[] args) {
+		int rows = 3;
+		int cols = 3;
+		int [][] arr = new int [rows][cols];
+		System.out.println(Arrays.toString(arr));
+	}
+}

@@ -1,0 +1,74 @@
+package com.basics;
+
+import java.util.*;
+
+public class Class2 {
+
+	public static void main(String[] args) {
+//		int[] arr = { 39, 17, 6, 7, 19 };
+//		int max1 = 0;// 39
+//		int max2 = 0;// 17
+//		if (arr[0] > arr[1]) {
+//			max1 = arr[0];
+//			max2 = arr[1];
+//		} else {
+//			max1 = arr[1];
+//			max2 = arr[0];
+//		}
+//		for (int i = 2; i < arr.length; i++) {
+//			if (arr[i] > max1) {
+//				max2 = max1;
+//				max1 = arr[i];
+//			}
+//			if (arr[i] > max2) {
+//				max2 = arr[i];
+//			}
+//		}
+//		System.out.println(max2);
+		
+//		String s = "i have two pens";
+//		String rep = "two";
+//		String nrep = "2";
+//		String [] arr= s.split(" ");
+//		//arr = {"i","have","two","pens"};
+//		for(int i=0; i<arr.length; i++) {
+//			if(arr[i].equals(rep)) {
+//				System.out.print(nrep+" ");
+//			}
+//			else {
+//				System.out.print(arr[i]+" ");
+//			}
+//		}
+		
+		
+		String s = "rama is ruuning rama is walking rama is sleeping rahul is walking";
+		HashMap<String, Integer> map = new HashMap<>();
+		String [] arr = s.split(" ");
+		for(int i=0; i<arr.length; i++) {
+			if(map.containsKey(arr[i])) {
+				map.put(arr[i], map.get(arr[i])+1);
+			}
+			else {
+				map.put(arr[i], 1);
+			}
+		}
+		
+		System.out.println(map);
+//		for(String name : map.keySet()) {
+//			System.out.println(name);
+//		}
+		List<Map.Entry<String, Integer>> list = new ArrayList<>(map.entrySet());
+		System.out.println(list);
+        
+        list.sort((a, b) -> b.getValue().compareTo(a.getValue()));
+
+        
+        Map<String, Integer> sortedDesc = new LinkedHashMap<>();
+        for (Map.Entry<String, Integer> entry : list) {
+            sortedDesc.put(entry.getKey(), entry.getValue());
+        }
+
+        System.out.println(sortedDesc);
+		
+	}
+}

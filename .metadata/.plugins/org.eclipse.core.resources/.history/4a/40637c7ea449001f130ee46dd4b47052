@@ -1,0 +1,30 @@
+package com.june;
+
+public class substringggg1 {
+	
+	public static String reverse(String s) {
+		String res = "";
+		for(int i=0; i<s.length(); i++) {
+			res = s.charAt(i)+res;
+		}
+		return res;
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "abcbcbd";
+		for(int i=0; i<s.length(); i++) {
+			String res = "";
+			for(int j=i; j<s.length(); j++) {
+				//System.out.println(s.substring(i, j+1));
+				res = res + s.charAt(j);
+				String res1 = reverse(res);
+				if(res.equals(res1)) {
+					System.out.println(res);
+				}
+			}
+		}
+	}
+
+}

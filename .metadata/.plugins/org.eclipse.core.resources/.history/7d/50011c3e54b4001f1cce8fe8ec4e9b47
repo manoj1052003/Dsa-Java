@@ -1,0 +1,15 @@
+package com.sepnov;
+
+public class class9 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		byte a = 1;
+		while(a <= 300) {
+			System.out.println(a);
+			a++;
+		}
+		
+	}
+
+}

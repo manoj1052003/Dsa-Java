@@ -1,0 +1,19 @@
+package com.novdec.string;
+
+public class second {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "pentaAGON";
+		for (int i=0; i<s.length();i++) {
+			char c =s.charAt(i);
+			if (c>=65 && c<=90) {
+				System.out.println(chr(c+32));
+			}
+			else {
+				System.out.println(chr(c-32));
+			}
+		}
+	}
+
+}

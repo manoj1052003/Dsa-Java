@@ -1,0 +1,11 @@
+package com.basics;
+
+public class Class2 {
+
+
+	public static void main(String[] args) {
+		float a = 20;
+		float b = 3;
+		System.out.println(a/3);
+	}
+}

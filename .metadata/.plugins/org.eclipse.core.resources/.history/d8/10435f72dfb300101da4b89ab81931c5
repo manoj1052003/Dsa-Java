@@ -1,0 +1,75 @@
+package com.LLbasics;
+
+class Node {
+	int data;
+	Node next;
+
+	Node(int data) {
+		this.data = data;
+		this.next = null;
+	}
+}
+
+class SLL {
+
+	Node head;
+
+	public void add_last(int data) {
+		Node temp = new Node(data);
+		if (head == null) {
+			head = temp;
+		} else {
+			Node curr = head;
+			while (curr.next != null) {
+				curr = curr.next;
+			}
+			curr.next = temp;
+		}
+	}
+
+	public void delete_last() {
+		if (head == null) {
+			System.out.println("ll is already empty");
+		} else if (head.next == null) {
+			head = null;
+		} else {
+			Node curr = head;
+			while (curr.next.next != null) {
+				curr = curr.next;
+			}
+			curr.next = null;
+		}
+	}
+	
+	public void add_first(int data) {
+		Node temp = new Node(data);
+		temp.next = head;
+		head = temp;
+		
+	}
+
+	public void print() {
+		Node curr = head;
+		while (curr != null) {
+			System.out.print(curr.data + " ");
+			curr = curr.next;
+		}
+		System.out.println();
+	}
+}
+
+public class First {
+
+	public static void main(String[] args) {
+		SLL sll = new SLL();
+		sll.add_last(10);
+		sll.add_last(20);
+		sll.add_last(40);
+		sll.add_last(30);
+		sll.print();
+		sll.add_first(5);
+		sll.print();
+
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.july24;
+import java.util.*;
+public class basicsofstring {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "pentagon";
+		char [] arr =  s.toCharArray();
+		System.out.println(Arrays.toString(arr));
+		
+	}
+
+}

@@ -1,0 +1,32 @@
+package com.numbers;
+
+public class hcfgabriel {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		while(a != b) {
+			
+			if (a > b) {
+				
+				a = a % b;
+				
+			}
+			else {
+				
+				b = b % a;
+			}
+			
+		}
+		
+		if (a != 0) {
+			return a;
+		}
+		else {
+			return b;
+		}
+			
+	}
+	}
+
+}

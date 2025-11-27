@@ -1,0 +1,11 @@
+package com.practice;
+
+public class Shopping {
+	
+	Payment p ;
+	
+	void doPayment(int amt) {
+		
+		p.pay();
+	}
+}

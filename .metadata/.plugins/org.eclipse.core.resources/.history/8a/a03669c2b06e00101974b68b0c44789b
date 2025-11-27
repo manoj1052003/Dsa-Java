@@ -1,0 +1,30 @@
+package com.basicop;
+
+public class Class1assign {
+	
+	public static int count_digit(int num) {
+		int count = 0;
+		while(num != 0) {
+			num /= 10;
+			count++;
+		}
+		return count;
+	}
+	
+	public static int rec_count_digit(int num,int count) {
+		if(num == 0) {
+			return count;
+		}
+		return rec_count_digit(num/10,count++);
+	}
+
+	public static void main(String[] args) {
+		int num = 2345;
+		int count = 0;
+		int digit = rec_count_digit(num,count);
+		System.out.println(digit);
+		
+		
+	}
+
+}

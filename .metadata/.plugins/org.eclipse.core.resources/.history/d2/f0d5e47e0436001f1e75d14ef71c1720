@@ -1,0 +1,25 @@
+package com.novdec.string;
+import java.util.*;
+
+public class occofcharector {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "pentagonspace";
+		char [] arr = s.toCharArray();
+		int [] counts = new int[123];
+		System.out.println(Arrays.toString(arr));
+		
+		for(char c : arr) {
+			if(c<123) {
+				counts[c] = counts[c]+1;
+			}
+		}
+		for (int i=0; i<counts.length; i++) {
+			if(counts[i]>0) {
+				System.out.println(counts[i]);
+			}
+		}
+	}
+
+}

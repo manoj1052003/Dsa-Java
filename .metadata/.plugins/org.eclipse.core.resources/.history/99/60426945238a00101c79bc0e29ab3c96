@@ -1,0 +1,61 @@
+package com.stackArray;
+
+public class StackArray {
+	
+	int top;
+	int capacity;
+	int [] arr;
+	
+	public StackArray(int capacity) {
+		this.capacity = capacity;
+		arr = new int[capacity];
+		top = -1;
+	}
+	
+	public void push(int data) {
+		if(top == capacity -1) {
+			System.out.println("overflow exc");
+			return ;
+		}
+		arr[++top] = data;
+	}
+	
+	public int pop() {
+		if(top == -1) {
+			System.out.println("stack underflow exc");
+			return -1;
+		}
+		return arr[top--];
+	}
+	
+	public int peek() {
+		if(top == -1) {
+			System.out.println("stack is alr empty");
+			return -1;
+		}
+		return arr[top];
+	}
+	
+	public boolean isEmpty() {
+		if(top == -1) {
+			return true;
+		}
+		return false;
+	}
+	
+	public void print_stack() {
+		for(int i=top; i>=0 ; i--) {
+			System.out.print(arr[i]+" ");
+		}
+		System.out.println();
+	}
+	
+
+	public static void main(String[] args) {
+		 StackArray st = new StackArray(5);
+		 st.peek();
+		 //st.print_stack();
+
+	}
+
+}

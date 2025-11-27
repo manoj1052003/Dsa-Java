@@ -1,0 +1,27 @@
+package com.csr;
+import java.util.*;
+
+public class bubblesort {
+	public static void sort(int[] arr) {
+		int temp = arr[0];
+		for (int i=1; i<arr.length; i++) {
+			for (int j=1; j<arr.length; j++) {
+				if(arr[i-1]>arr[i]) {
+					temp = arr[i];
+					arr[i]=arr[i-1];
+					arr[i-1]=temp;
+				}
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [] arr = {23,67,89,45,34,62,15,19};
+		sort(arr);
+		System.out.println(Arrays.toString(arr));
+		
+
+	}
+
+}

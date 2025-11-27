@@ -1,0 +1,22 @@
+package test;
+
+public class SkipCharacter {
+	
+	static String skip(String s1, int i, String res, char ch) {
+		if(i == s1.length()) {
+			return res;
+		}
+		
+		if(s1.charAt(i) != ch) {
+			res += s1.charAt(i);
+		}
+		return skip(s1, (i+1), res, ch);
+	}
+
+	public static void main(String[] args) {
+		String s1 = "baccad";
+		System.out.println(skip(s1, 0, "", 'a'));
+
+	}
+
+}

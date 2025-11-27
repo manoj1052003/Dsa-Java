@@ -1,0 +1,30 @@
+package com.numbers;
+
+
+public class classmeth {
+	
+	public static int sqr_digit(int num) {
+		int res = 0; // 65
+		while(num != 0) {
+			int rem = num % 10;
+			res = (rem * rem ) + res;
+			num = num / 10;
+		}
+		return res;
+	}
+	
+	
+	public static void main(String[] args) {
+		int num = 18;
+		int res = sqr_digit(num);
+		while(res!=1 && res!=4) {
+			res = sqr_digit(res);
+		}
+		if(res == 1) {
+			System.out.println("happy");
+		}
+		if(res == 4) {
+			System.out.println("its not");
+		}
+	}
+}

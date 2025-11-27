@@ -1,0 +1,25 @@
+package com.backup;
+
+public class day7 {
+	public static boolean check_prime(int num) {
+		for(int i=2; i<num; i++) {
+			if(num%i==0) {
+				return false;
+			}
+		}
+		return true; 
+	}
+	public static void main(String[] args) {
+		// O(n)
+		for(int n=1; n<=10000; n++) {
+			int num = n;
+			boolean res = check_prime(num);
+			if(res==true) {
+				System.out.println(num);
+			}
+		}
+		
+		
+	}
+
+}

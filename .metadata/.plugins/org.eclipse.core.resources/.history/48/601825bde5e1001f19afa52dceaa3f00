@@ -1,0 +1,45 @@
+package com.onlinejavapro;
+
+import java.util.Arrays;
+
+public class class28string5 {
+
+	public static void reverse(String s) {
+		String res = "";
+		for(int i=0; i<s.length(); i++) {
+			res = s.charAt(i) + res;
+		}
+		System.out.print(res);
+	}
+	
+	
+	
+	
+	
+	
+	//india
+	public static void con_up(String s) {
+		String res = "";
+		for(int i=0; i<s.length(); i++) {
+			if(s.charAt(0) >= 97 && i==0 || s.charAt(0) >= 97 && i==s.length()-1)) {
+				int nas = s.charAt(i) -32;
+				char nch = (char)nas;
+				res = res + nch;
+			}
+			else {
+				res = res + s.charAt(i); 
+			}
+		}
+		System.out.print(res+" ");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "India is my country";
+		String [] arr = s.split(" ");
+		for(int i=0; i<arr.length; i++) {
+			con_up(arr[i]);
+		}
+	}
+
+}

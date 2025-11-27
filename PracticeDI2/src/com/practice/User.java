@@ -1,0 +1,19 @@
+package com.practice;
+
+public class User {
+
+	public static void main(String[] args) {
+		
+		Card cd = new Card();
+		
+		Cash cs = new Cash();
+		
+		Shopping s = new Shopping(cd);
+		
+		//s.p = cd;
+		//s.setP(cs);
+		
+		s.doPayment(50);
+	}
+
+}

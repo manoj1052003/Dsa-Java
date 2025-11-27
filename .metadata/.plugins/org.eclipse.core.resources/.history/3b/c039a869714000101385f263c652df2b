@@ -1,0 +1,19 @@
+package com.opr;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class may1 {
+
+	public static void main(String[] args) {
+		String s = "malayalam";
+		HashMap<Character, Integer> map= new HashMap<>();
+		char arr[] = s.toCharArray();
+		for(char c : arr) {
+			
+		}
+		
+		
+	}
+
+}

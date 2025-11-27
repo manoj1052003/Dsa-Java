@@ -1,0 +1,20 @@
+package com.novdec.number;
+
+public class happynum {
+	
+	public static int check_happy(int num) {
+		int sum = 0;
+		while(num>0) {
+			int rem = num % 10;
+			sum = (rem*rem)+sum ;
+			num = num / 10;
+		}
+		return sum;
+	}
+	
+	public static void main(String[] args) {
+		int num = 145;
+		int res = check_happy(num);
+		System.out.println(res);
+	}
+}

@@ -1,0 +1,30 @@
+package com.grooom;
+
+import java.util.HashMap;
+import java.util.*;
+
+public class cog {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "aabbbbeeeeffggg";
+		String res = "";
+		HashMap<Character,Integer> map= new HashMap<>();
+		for(int i=0; i<s.length(); i++) {
+			char ch = s.charAt(i);
+			if(map.containsKey(ch)) {
+				map.put(ch, map.get(ch)+1);
+			}
+			else {
+				map.put(ch, 1);
+			}
+		}
+		System.out.println(map);
+		for(Map.Entry<Character, Integer> e: map.entrySet()) {
+			System.out.println(e.getKey()+""+e.getValue());
+			res=res+e.getKey()+e.getValue();
+		}
+		System.out.println(res);
+	}
+
+}

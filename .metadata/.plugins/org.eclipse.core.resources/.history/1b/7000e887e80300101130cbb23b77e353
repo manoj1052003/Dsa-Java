@@ -1,0 +1,27 @@
+package com.jan26;
+
+public class class14num4 {
+	
+	public static int find_ans(int num) {  // num = 0
+		int res = 0;                        //res = 65
+		while(num != 0) {
+			int rem = num % 10;        //rem = 1
+			res = rem + res;
+			num = num / 10;
+		}
+		return res;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 14;
+		int num1 = num+1;
+		while(find_ans(num)*2 != find_ans(num1)) {
+			num1++;
+		}
+		
+		
+		
+	}
+
+}

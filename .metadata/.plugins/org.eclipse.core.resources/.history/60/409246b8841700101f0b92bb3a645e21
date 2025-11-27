@@ -1,0 +1,31 @@
+package com.sepnov;
+
+import java.util.Scanner;
+
+public class num1 {
+	
+	public static int print_fact(int n) {
+		int count = 0;
+		for(int i=1; i<=n; i++) {
+			if(n%i==0) {
+				count++;
+			}
+		}
+		return count;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		for(int i=1; i<=1000000; i++) {
+			int n = i;
+			int f = print_fact(n);
+			if(f==2) {
+				System.out.println(i);
+			}
+		}
+		
+		
+		
+	}
+
+}

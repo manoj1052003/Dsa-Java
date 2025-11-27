@@ -1,0 +1,21 @@
+package com.jan26;
+
+import java.util.Arrays;
+
+public class class14num4 {
+
+	public static void main(String[] args) {
+		
+		String s1 = "hello";
+		String s2 = "hello";
+		String res = "";
+		for(int i=0; i<s1.length(); i++) {
+			res = res + s1.charAt(i);
+		}
+		System.out.println(res);
+		System.out.println(s1==s2);
+		System.out.println(s2==res);
+		System.out.println(res==s1);
+	}
+
+}

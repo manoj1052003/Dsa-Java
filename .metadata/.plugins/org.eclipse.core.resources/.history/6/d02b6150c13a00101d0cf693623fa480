@@ -1,0 +1,108 @@
+package com.deque.doubleended;
+
+class Node{
+	int data;
+	Node next;
+	Node prev;
+	
+	Node(int data){
+		this.data = data;
+		this.next = null;
+		this.prev = null;
+	}
+}
+
+class deque{
+	Node front;
+	Node rear;
+	
+	public void add_first(int ele) {
+		Node temp = new Node(ele);
+		if(front == null) {
+			front = temp;
+			rear = temp;
+			return;
+		}
+		temp.next = front;
+		front.prev = temp;
+		front = temp;
+	}
+	
+	public void add_last(int ele) {
+		Node temp = new Node(ele);
+		if(rear == null) {
+			front = temp;
+			rear = temp;
+			return;
+		}
+		rear.next = temp;
+		temp.prev = rear;
+		rear = temp;
+	}
+	
+	public int delete_first() {
+	    if (front == null) {
+	    	return -1;
+	    }
+	    int val = front.data;
+	    front = front.next;
+	    if (front == null) {// when there is only one Node
+	        rear = null;
+	    } 
+	    else {
+	        front.prev = null;
+	    }
+	    return val;
+	}
+
+	
+	public int delete_last() {
+	    if (rear == null) {
+	    	return -1;
+	    } 
+	    int val = rear.data;
+	    rear = rear.prev;
+	    if (rear == null) {// when there is only one Node
+	        front = null;
+	    } 
+	    else {
+	        rear.next = null;
+	    }
+	    return val;
+	}
+
+}
+
+
+public class mysyack {
+	
+	deque d ;
+	
+	public void push(int ele) {
+		d.add_last(ele);
+	}
+	
+	public int pop() {
+		int val = d.delete_last();
+		if(val == -1) {
+			System.out.println("queue is already empty");
+			return;
+		}
+		return val;
+	}
+	
+	public void peek() {
+		
+	}
+	
+	public void display() {
+		
+	}
+
+	public static void main(String[] args) {
+		mysyack st = new mysyack();
+		st.
+
+	}
+
+}

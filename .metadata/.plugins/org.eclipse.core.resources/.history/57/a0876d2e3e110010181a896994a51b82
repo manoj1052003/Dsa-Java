@@ -1,0 +1,11 @@
+package com.patterns;
+
+public class class4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "pentagon";
+		System.out.println(s.substring(1, 4));
+	}
+
+}

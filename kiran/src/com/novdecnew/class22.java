@@ -1,0 +1,31 @@
+package com.novdecnew;
+
+public class class22 {
+	
+	public static String lower(String s) {
+		String res = "";
+		for(int i=0; i<s.length(); i++) {
+			char ch = s.charAt(i);
+			if(ch>=65 && ch<=90) {
+				char ch1 = (char)(ch + 32);
+				//System.out.println(ch1);
+				res = res + ch1;
+			}
+			else {
+				
+				//System.out.println(ch1);
+				res = res + ch;
+			}
+		}
+		return res;
+	}
+
+	public static void main(String[] args) {
+		// .toUpperCase();
+		String s = "PEntaGOn";
+		String res = lower(s);
+		System.out.println(res);
+		
+	}
+
+}

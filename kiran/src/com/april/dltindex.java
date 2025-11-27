@@ -1,0 +1,22 @@
+package com.april;
+import java.util.*;
+
+public class dltindex {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr = {10,20,30,40,50,60,70,80,90};
+		int index = 4;
+		int [] res = new int[arr.length-1];
+		for(int i=0; i<index; i++) {
+			res[i]=arr[i];
+		}
+		System.out.println(Arrays.toString(arr));
+		System.out.println(Arrays.toString(res));
+		for(int i=index+1; i<arr.length; i++) {
+			res[i-1] = arr[i];
+		}
+		System.out.println(Arrays.toString(res));
+	}
+
+}

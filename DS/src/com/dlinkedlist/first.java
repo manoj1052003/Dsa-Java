@@ -1,0 +1,99 @@
+package com.dlinkedlist;
+
+class Node{
+	int data;
+	Node next;
+	Node prev;
+	
+	Node(int data){
+		this.data = data;
+		this.next = null;
+		this.prev = null;
+	}
+}
+
+class DLinkedList{
+	
+	Node head;
+	Node tail;
+	
+	void print_dll() {
+			Node curr = head;
+			while(curr != null) {
+				System.out.print(curr.data+" ");
+				curr = curr.next;
+			}
+			System.out.println();
+		}
+	
+	void add_last(int ele) {
+		Node temp = new Node(ele);
+		if(head == null) {
+			head = temp;
+			tail = temp;
+		}
+		else {
+			temp.prev = tail;
+			tail.next = temp;
+			tail = temp;
+		}
+	}
+	
+	void add_first(int ele) {
+		Node temp = new Node(ele);
+		if(head == null) {
+			head = temp;
+			tail = temp;
+		}
+		else {
+			temp.next = head;
+			head.prev = temp;
+			head = temp;
+		}
+	}
+	
+	int size() {
+		int count = 0;
+		Node curr = head;
+		while(curr != null) {
+			count++;
+			curr = curr.next;
+		}
+		return count;
+	}
+	
+	void add_at(int index, int ele) {
+		int count = 0;
+		Node curr = head;
+		Node temp = new Node(ele);
+		while(count < index -1) {
+			count++;
+			curr = curr.next;		
+		}
+		temp.next = curr.next;
+		temp.prev = curr;
+		curr.next.prev = temp;
+		curr.next = temp; 
+	}
+	
+}
+
+public class first {
+
+	public static void main(String[] args) {
+		
+		DLinkedList dll = new DLinkedList();
+		dll.add_last(10);
+		dll.add_last(20);
+		dll.add_last(30);
+		dll.add_last(60);
+		dll.print_dll();
+		dll.add_first(5);
+		dll.print_dll();
+		dll.add_at(2, 15);
+		dll.print_dll();
+		
+
+	}
+
+}

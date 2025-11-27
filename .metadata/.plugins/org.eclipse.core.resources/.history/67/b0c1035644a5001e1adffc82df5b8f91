@@ -1,0 +1,16 @@
+package com.novdec;
+
+public class firstclass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 20;
+		for (int i = num; i >= 1; i--) {
+			System.out.print(i);
+		}
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.collections;
+import java.util.*;
+public class preorityqueueee {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 PriorityQueue<Integer> pq = new PriorityQueue<>();
+		 System.out.println(pq);
+	}
+
+}

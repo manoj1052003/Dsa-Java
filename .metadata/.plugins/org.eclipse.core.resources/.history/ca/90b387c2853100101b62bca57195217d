@@ -1,0 +1,98 @@
+package com.slinkedlist;
+
+
+class Node{
+	int data;
+	Node next;
+	
+	public Node(int data) {
+		this.data = data;
+		this.next = null;
+	}
+}
+
+class Linked_list{
+	
+	Node head;
+	
+	public void print_LL() {
+		if(head == null) {
+			System.out.println("ll is empty");
+		}
+		else {
+			Node curr = head;
+			while(curr != null) {
+				System.out.print(curr.data+" ");
+				curr = curr.next;
+			}
+		}
+		System.out.println();
+		
+	}
+	
+	public void add(int ele) {
+		Node temp = new Node(ele);
+		if(head == null) {
+			head = temp;
+		}
+		else {
+			Node curr = head;
+			while(curr.next != null) {
+				curr = curr.next;
+			}
+			curr.next = temp;
+		}
+	}
+	
+	public void add_first(int ele) {
+		Node temp = new Node(ele);
+		temp.next = head;
+		head = temp;
+		
+	}
+	
+	public int size() {
+		Node curr = head;
+		int count = 0;
+		while(curr!=null) {
+			count++;
+			curr = curr.next;
+		}
+		return count;
+	}
+	
+	public void add_at(int index, int ele){//index = 2 ele = 100
+		if(index == 0) {
+			add_first(ele);
+			return;
+		}
+		if(index == size()) {
+			add(ele);
+		}
+		else {
+			Node curr = head;
+			int count = 0;
+			Node temp = new Node(ele);
+			while(count < index-1) {
+				count++;
+				curr = curr.next;
+			}
+			temp.next = curr.next;
+			curr.next = temp;
+		}
+	}
+	
+}
+
+public class First {
+	
+	public static void main(String[] args) {
+		Linked_list ll = new Linked_list();
+		ll.add(99);
+		ll.add(10);
+		ll.add(20);
+		ll.add(30);
+		ll.add(40);
+		ll.print_LL();
+	}
+}

@@ -1,0 +1,25 @@
+package com.july24;
+
+import java.util.Arrays;
+
+public class string2 {
+	
+	public static void reverse(String s) {
+		String res = "";
+		for(int i=0; i<s.length(); i++) {
+			res = s.charAt(i) + res; 
+		}
+		System.out.print(res+" ");
+	}
+	
+	public static void main(String[] args) {
+		String s = "rama is running";
+		String [] arr = s.split(" ");
+		//System.out.println(Arrays.toString(arr));
+		for(String val:arr) {
+			reverse(val);
+		}
+	
+	}
+
+}

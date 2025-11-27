@@ -1,0 +1,29 @@
+package com.april;
+
+public class aprilnum1 {
+	
+	public static int find_perfect(int num) {
+		int res = 0;
+		for (int i=1; i<num; i++) {
+			if(num%i==0) {
+				res = res+i;
+			}
+		}
+		return res;
+	}
+
+	public static void main(String[] args) {
+		// multiplication table
+		int n =6;
+		int res = find_perfect(n);
+		if(res==n) {
+			System.out.println("its perfect");
+		}
+		else {
+			System.out.println("its not");
+		}
+		
+		
+	}
+
+}

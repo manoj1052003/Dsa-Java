@@ -1,0 +1,32 @@
+package com.novdec;
+import java.util.Scanner;
+
+public class countdigit {
+
+	public static void main(String[] args) {
+		
+		for(int n=1;n<=10000;n++) {
+			int res=0;
+			int num=n;
+			int temp=num;
+			int count=0;
+			while(n>0) {
+				n=n/10;
+				count+=1;
+			}
+			while(num>0)
+			{
+				int rem=num%10;
+				res=(int)(Math.pow(rem,count))+res;
+				num=num/10;
+			}
+			if(res==temp)
+			{
+				System.out.println(n);
+			}
+
+		}
+	
+	}
+}
+		

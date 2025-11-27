@@ -1,0 +1,52 @@
+package com.bank.dao;
+
+import java.util.ArrayList;
+
+import com.bank.dto.Customer;
+
+public class CustomerDAOimp implements CustomerDAO {
+
+	@Override
+	public boolean insertCustomer(Customer c) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Customer getCustomer(long acc_no, int pin) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Customer getCustomer(long phone, String mail) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Customer getCustomer(long acc) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<Customer> getCustomer() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean updateCustomer(Customer c) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean deleteCustomer(Customer c) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	
+}

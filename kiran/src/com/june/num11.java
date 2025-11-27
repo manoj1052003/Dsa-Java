@@ -1,0 +1,22 @@
+package com.june;
+
+public class num11 {
+	public static void print_num(int num) {
+		if(num==0) {
+		System.out.println(num);
+		return;
+		}
+		System.out.println(num);
+		print_num(num-1);
+		System.out.println(num);
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 4;
+		print_num(num);
+		
+	}
+
+}

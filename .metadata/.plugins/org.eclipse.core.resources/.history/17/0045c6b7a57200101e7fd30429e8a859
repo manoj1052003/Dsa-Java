@@ -1,0 +1,40 @@
+package com.basicop;
+
+public class Test {
+
+	public static void main(String[] args) {
+		int [] arr = {21,-5,-22,5,9,-34};
+		int k = 3;
+		int start = 0;
+		int end = k-1;
+		int max_sum = 0;
+		for(int i=0; i<k ; i++) {
+			max_sum += arr[i];
+		}
+		//int max_sum = Integer.MIN_VALUE;
+		for(int i=0; i<arr.length; i++) {
+			for(int j=i; j<arr.length; j++) {
+				int sum = 0;
+				int len = 0;
+				for(int x= i; x <=j; x++) {
+					sum += arr[x];
+					len++;
+				}
+				if(sum > max_sum && len == k) {
+					max_sum = sum;
+					start = i;
+					end = j;
+					
+				}
+			}
+		}
+//		System.out.println(start);
+//		System.out.println(end);
+		System.out.println(max_sum);
+		for(int i = start ; i<=end; i++) {
+			System.out.print(arr[i] + " ");
+		}
+
+	}
+
+}

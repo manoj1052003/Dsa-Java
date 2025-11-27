@@ -1,0 +1,21 @@
+package com.timecom;
+
+public class factors {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 24;
+		for(int i=1; i<=(int)Math.sqrt(num); i++) {
+			if(num%i==0) {
+				System.out.println(i);
+				
+			}
+		}
+		for(int i=(int)Math.sqrt(num); i>=1; i--) {
+			if(num%i==0) {
+				System.out.println(num/i);
+			}
+		}
+	}
+
+}

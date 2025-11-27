@@ -1,0 +1,25 @@
+package com.june19;
+
+public class twelethclass {
+	
+	public static int hcf_b(int a, int b) {
+		int cf = 0;
+		int smlt = (a<b)?a:b;
+		for(int i=1; i<=smlt; i++) {
+			if(a%i==0 && b%i==0) {
+				cf = i;
+			}
+		}
+		return cf;
+	}
+
+	public static void main(String[] args) {
+		int a = 18;
+		int b = 24;
+		int res = hcf_b(a,b);
+		System.out.println(res);
+		
+
+	}
+
+}

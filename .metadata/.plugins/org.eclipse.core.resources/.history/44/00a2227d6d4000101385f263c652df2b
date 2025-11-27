@@ -1,0 +1,20 @@
+package com.opr;
+
+import java.util.HashMap;
+
+public class may1 {
+
+	public static void main(String[] args) {
+		HashMap<String, int[]> mp = new HashMap<>();
+		System.out.println(mp);
+		int [] arr1 = {1,2,3,4,5};
+		mp.put("Rakesh", arr1);
+		mp.put("virat", 18);
+		mp.put("salt", 23);
+		mp.put("ABD", 17);
+		System.out.println(mp);
+		System.out.println(mp.get("ABD"));
+		System.out.println(mp.get("virat"));
+	}
+
+}

@@ -1,0 +1,22 @@
+package com.csr;
+
+public class heart {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int rows=5;
+		
+		for (int i=1; i<=rows;i++) {
+			for (int j=0;j<i;j++) {
+				if((i+j)%2==0) {
+					System.out.print("1"+" ");
+				}
+				else {
+					System.out.println("0"+" ");
+				}
+			}
+			System.out.println();
+		}
+	}
+
+}

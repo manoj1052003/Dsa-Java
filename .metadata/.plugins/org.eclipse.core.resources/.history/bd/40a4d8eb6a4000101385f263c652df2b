@@ -1,0 +1,11 @@
+package com.opr;
+
+import java.util.HashMap;
+
+public class may1 {
+
+	public static void main(String[] args) {
+		HashMap<String, Integer> mp = new HashMap<>();
+	}
+
+}

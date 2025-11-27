@@ -1,0 +1,46 @@
+package com.tree;
+
+
+class Node{
+	int data;
+	Node left;
+	Node right;
+	
+	Node(int data){
+		this.data = data;
+		this.left = null;
+		this.right = null;
+	}
+}
+
+public class BinaryTree {
+	
+	
+	public static void pre_order(Node root) {
+		if(root == null) {
+			return;
+		}
+		System.out.println(root.data+" ");
+		pre_order(root.left);
+		pre_order(root.right);
+	}
+	
+	public static void in_order() {
+		
+	}
+	
+	public static void post_order() {
+		
+	}
+
+	public static void main(String[] args) {
+		Node root = new Node(1);
+		root.left = new Node(2);
+		root.right = new Node(3);
+		root.left.left = new Node(4);
+		root.left.right = new Node(5);
+		pre_order(root);
+
+	}
+
+}

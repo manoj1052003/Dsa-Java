@@ -1,0 +1,91 @@
+package com.DLinkedList;
+
+class Node{
+	int data;
+	Node next;
+	Node prev;
+	
+	Node(int data){
+		this.data = data;
+		this.next = null;
+		this.prev = null;
+	}
+}
+
+class DLL{
+	
+	Node head;
+	Node tail;
+	
+	public void add_first(int ele) {
+		Node temp = new Node(ele);
+		if(head == null) {
+			head = temp;
+		}
+		else {
+			temp.next = head;
+			head.prev = temp;
+			head = temp;
+		}
+	}
+	
+	public void add_last(int ele) {
+		Node temp = new Node(ele);
+		if(head == null) {
+			head = temp;
+		}
+		else {
+			Node curr = head;
+			while(curr.next != null) {
+				curr = curr.next;
+			}
+			curr.next = temp;
+			temp.prev = curr;
+		}
+	}
+	
+	public void print_LL_front() {
+		if(head == null) {
+			System.out.println("ll is empty");
+		}
+		else {
+			Node curr = head;
+			while(curr != null) {
+				System.out.println(curr.data);
+				curr = curr.next;
+			}
+		}
+	}
+	
+	public void print_LL_back() {
+		if(head == null) {
+			System.out.println("ll is empty");
+		}
+		else {
+			Node curr = tail;
+			while(tail != null) {
+				System.out.println(curr.data);
+				curr = curr.prev;
+			}
+		}
+	}
+	
+}
+
+public class First {
+
+	public static void main(String[] args) {
+		DLL dll = new DLL();
+		dll.add_last(10);
+		dll.add_last(30);
+		dll.add_last(40);
+		dll.add_last(20);
+		dll.add_first(99);
+		
+		dll.print_LL_front();
+		
+		
+
+	}
+
+}

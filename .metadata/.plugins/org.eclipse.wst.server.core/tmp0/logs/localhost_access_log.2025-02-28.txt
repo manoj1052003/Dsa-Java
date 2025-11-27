@@ -1,0 +1,14 @@
+127.0.0.1 - - [28/Feb/2025:11:16:09 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [28/Feb/2025:11:16:18 +0530] "GET /StudentAppDAO/ HTTP/1.1" 200 3770
+0:0:0:0:0:0:0:1 - - [28/Feb/2025:11:16:19 +0530] "GET /StudentAppDAO/car111.jpg HTTP/1.1" 200 1958171
+0:0:0:0:0:0:0:1 - - [28/Feb/2025:11:16:19 +0530] "GET /favicon.ico HTTP/1.1" 404 763
+0:0:0:0:0:0:0:1 - - [28/Feb/2025:11:16:51 +0530] "GET /StudentAppDAO/Login.jsp HTTP/1.1" 404 740
+0:0:0:0:0:0:0:1 - - [28/Feb/2025:11:19:46 +0530] "GET /StudentAppDAO/login.jsp HTTP/1.1" 200 3770
+0:0:0:0:0:0:0:1 - - [28/Feb/2025:11:19:52 +0530] "GET /StudentAppDAO/login.jsp HTTP/1.1" 200 3770
+0:0:0:0:0:0:0:1 - - [28/Feb/2025:11:20:02 +0530] "GET /StudentAppDAO/ HTTP/1.1" 200 3770
+0:0:0:0:0:0:0:1 - - [28/Feb/2025:11:24:23 +0530] "POST /StudentAppDAO/Login HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [28/Feb/2025:11:24:23 +0530] "GET /StudentAppDAO/Dashboard.jsp HTTP/1.1" 200 3411
+0:0:0:0:0:0:0:1 - - [28/Feb/2025:11:24:47 +0530] "GET /StudentAppDAO/viewuser.jsp HTTP/1.1" 200 4735
+0:0:0:0:0:0:0:1 - - [28/Feb/2025:11:24:54 +0530] "GET /StudentAppDAO/viewuser.jsp HTTP/1.1" 200 4735
+0:0:0:0:0:0:0:1 - - [28/Feb/2025:11:24:56 +0530] "GET /StudentAppDAO/viewuser.jsp HTTP/1.1" 200 4735
+0:0:0:0:0:0:0:1 - - [28/Feb/2025:11:25:54 +0530] "GET /StudentAppDAO/update.jsp HTTP/1.1" 200 3320

@@ -1,0 +1,38 @@
+package july;
+
+import java.util.Arrays;
+
+public class class4 {
+	
+//	public static void print_subarray(int i, int j, int [] arr) {
+//		for(int l=i; l<=j; l++) {
+//			System.out.print(arr[l]+" ");
+//		}
+//		System.out.println();
+//	}
+
+	public static void main(String[] args) {
+		int[] arr = { 4, -1, 2, 2, 1, -4, 6 };
+		int k = 7;
+		int min_len = 9999;
+		for (int i = 0; i < arr.length; i++) {
+			for(int j=i; j<arr.length; j++) {
+				int sum = 0;
+				int len = 0;
+				for(int l=i; l<=j; l++) {
+					sum += arr[l];
+					len++;
+				}
+				if(sum >= k) {
+					//print_subarray(i, j,arr);
+					if(len < min_len) {
+						min_len = len;
+					}
+				}
+			}
+		}
+		System.out.println(min_len);
+
+	}
+
+}

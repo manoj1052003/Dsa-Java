@@ -1,0 +1,28 @@
+package com.basics;
+
+import java.util.Arrays;
+
+public class Class2 {
+	
+	public static void l_search(int [][] arr, int key) {
+		for(int i=0; i<arr.length; i++) {
+			for(int j=0; j<arr[0].length; j++) {
+				if(arr[i][j] == key) {
+					System.out.println(i+" "+j);
+					return;
+				}
+			}
+		}
+		System.out.println("{-1,-1}");
+		return;
+	}
+	
+
+	public static void main(String[] args) {
+		
+		int [][] res = {{1,2,3},{4,5,6},{7,8,9}};
+		int key = 6;
+		l_search(res, key);
+		
+	}
+}

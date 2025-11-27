@@ -1,0 +1,30 @@
+package com.june;
+
+public class num2 {
+
+	public static void main(String[] args) {
+		// time comp : O(sqrt(n))
+		int num = 29;
+		int count = 0;
+		for(int i = 1; i<=(int)Math.sqrt(num); i++) {
+			if(num % i==0) {
+				System.out.println(i);
+				count++;
+			}
+		}
+		
+		for(int i=(int)Math.sqrt(num); i>=1; i--) {
+			if(num % i==0 && i!=num/i) {
+				System.out.println(num/i);
+				count++;
+			}
+		}
+		if(count==2) {
+			System.out.println("its prime");
+		}
+		else {
+			System.out.println("its not");
+		}
+	}
+
+}

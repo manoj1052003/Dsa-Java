@@ -1,0 +1,21 @@
+package com.novdec.number;
+
+public class recfactorial {
+	
+	public static int fact(int num) {
+		if (num==0){
+			return 1;
+		}
+		return (num*fact(num-1));
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 3;
+		int res = fact(num);
+		System.out.println(res);
+
+	}
+
+}

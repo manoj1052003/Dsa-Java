@@ -1,0 +1,21 @@
+package com.onlinejavapro;
+
+public class class10 {
+	
+	public static void f_fact(int num) {
+		for(int i=1; i<=num ; i++) {
+			if(num%i==0) {
+				System.out.println(i);
+			}
+		}
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 24;
+		f_fact(num);
+		
+	}
+
+}

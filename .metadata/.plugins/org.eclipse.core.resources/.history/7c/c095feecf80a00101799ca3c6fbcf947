@@ -1,0 +1,17 @@
+package com.jan26;
+
+import java.util.Arrays;
+
+import com.csr.arr1;
+
+public class class14num4 {
+
+	
+	public static void main(String[] args) {
+		int [] arr1 = {12,23,34,45,56,67,78};
+		int [] arr2 = {12,23,34,45,56,67,78};
+		System.out.println(arr1.equals(arr2));
+		
+	}
+
+}

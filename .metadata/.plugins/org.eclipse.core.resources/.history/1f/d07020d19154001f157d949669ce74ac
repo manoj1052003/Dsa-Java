@@ -1,0 +1,26 @@
+package com.june;
+
+public class rectwo {
+	public static int c_digit(int num) {
+		int digit = 0;
+		while(num!=0) {
+			num /= 10;
+			digit++;
+		}
+		return digit;
+	}
+	
+	public static void rec_arm(int num,int res, int digit) {
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 153;
+		int res = 0;
+		int digit = c_digit(num);
+		System.out.println(digit);
+		
+	}
+
+}

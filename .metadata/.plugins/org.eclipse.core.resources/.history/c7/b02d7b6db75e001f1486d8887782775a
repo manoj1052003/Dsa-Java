@@ -1,0 +1,23 @@
+package com.kiran;
+
+public class dj {
+	
+	public static String rev(String s) {
+		String res = "";
+		for(int i=0; i<s.length(); i++) {
+			res = s.charAt(i)+res;
+		}
+		return res;
+	} 
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "this is pentagpon";
+		String arr[] = s.split(" ");
+		for(String st : arr) {
+			System.out.print(rev(st)+" ");
+		}
+		
+	}
+
+}

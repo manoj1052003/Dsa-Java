@@ -1,0 +1,21 @@
+package com.jan26;
+
+import java.util.Arrays;
+
+public class class14num4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a = 12;
+		int b = 24;
+		int grt = (a > b) ? a:b;
+		for(int i=grt; i<=(a*b) ; i++) {
+			if(i%a==0 && i%b==0) {
+				System.out.println(i);
+				break;
+			}
+		}
+		
+	}
+
+}

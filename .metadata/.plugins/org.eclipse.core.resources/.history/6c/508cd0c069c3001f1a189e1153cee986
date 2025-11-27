@@ -1,0 +1,18 @@
+package com.sepnov;
+import java.util.*;
+public class class21 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		String s = sc.next();
+		String s1 = sc.nextLine();
+		float per = sc.nextFloat();
+		String branch = sc.next();
+		System.out.println(s);
+		System.out.println(s1);
+		System.out.println(per);
+		System.out.println(branch);
+	}
+
+}

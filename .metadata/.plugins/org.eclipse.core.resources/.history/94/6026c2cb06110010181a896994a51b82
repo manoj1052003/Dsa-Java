@@ -1,0 +1,14 @@
+package com.patterns;
+
+public class class3 {
+
+	public static void main(String[] args) {
+		
+		String s = "pentagon";
+		System.out.println(s.substring(3));
+		
+		
+	}
+
+}
+

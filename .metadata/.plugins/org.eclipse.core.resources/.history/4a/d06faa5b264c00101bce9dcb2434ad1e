@@ -1,0 +1,31 @@
+package com.numbers;
+
+
+public class classmeth {
+	
+	public static int count_digit(int num) {
+		int count = 0;
+		while(num != 0 ) {
+			num = num / 10;
+			count++;
+		}
+		return count;
+	}
+	
+	public static int Arm(int num) {
+		int count = count_digit(num);
+		int res = 0;
+		while(count != 0 ) {
+			int rem = num % 10;
+			
+			num = num / 10;
+		}
+		return res;
+	}
+
+	public static void main(String[] args) {
+		int num = 153;
+		Arm(num);
+		
+	}
+}

@@ -1,0 +1,19 @@
+package com.jan26;
+
+public class class14num4 {
+	
+	public static int rec_factorial(int num, int res) {
+		if(num==1) {
+			return res;
+		}
+		return rec_factorial(num-1,(res*num));
+	}
+
+	public static void main(String[] args) {
+		int num = 5;
+		int res = rec_factorial(num,1);
+		System.out.println(res);
+		
+	}
+
+}

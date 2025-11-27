@@ -1,0 +1,22 @@
+package com.basics;
+
+public class Class2 {
+	
+	public static int count_digit(int num) {
+		int digit = 0;
+		while(num != 0) {
+			num /= 10;
+			digit++;
+		}
+		return digit;
+	}
+
+	public static void main(String[] args) {
+		
+		int num = 153;
+		int digit = count_digit(num);
+		System.out.println(digit);
+		
+
+	}
+}

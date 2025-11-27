@@ -1,0 +1,16 @@
+package com.csr;
+
+public class operatrs {
+
+	public static void main(String[] args) {
+		// unary
+		int a = 10;
+		int b = 20;
+		int res = (a>b)?a:b;
+		System.out.println(res);
+		
+		
+
+	}
+
+}

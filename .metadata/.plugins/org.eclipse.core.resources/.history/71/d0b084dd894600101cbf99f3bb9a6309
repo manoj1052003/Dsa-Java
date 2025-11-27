@@ -1,0 +1,17 @@
+package com.opr;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Pattern3 {
+	
+	public static void main(String[] args) {
+		String s = "pentagonspace";
+		for(int i=0; i<s.length(); i++) {
+			System.out.println(s.charAt(i));
+		}
+		
+		
+	}
+
+}

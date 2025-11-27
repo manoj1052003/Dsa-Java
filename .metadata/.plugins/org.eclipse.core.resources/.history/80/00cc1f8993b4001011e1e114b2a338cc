@@ -1,0 +1,58 @@
+package com.queue;
+
+public class QueueArray {
+
+	int[] arr;
+	int size;
+	int top;
+	int bot;
+
+	public QueueArray(int size) {
+		this.size = size;
+		this.top = -1;
+		this.bot = 0;
+		arr = new int[size];
+	}
+	
+	public void enque(int ele) {
+		if(top == size-1) {
+			System.out.println("queue overflow");
+			return;
+		}
+		//top++;
+		arr[++top] = ele;
+	}
+	
+	public int dequeue() {
+		if(bot > top) {//st > end
+			System.out.println("queue underflow exc");
+			return -1;
+		}
+		int top_ele = arr[bot++];
+		//top--;
+		return top_ele;
+	}
+	
+	public int peek() {
+		if(bot > top) {
+			System.out.println("queue underflow exc");
+			return -1;
+		}
+		return arr[bot];
+	}
+	
+	public boolean isEmpty() {
+		if(bot > top) {
+			return true;
+		}
+		return false;
+	}
+
+	public static void main(String[] args) {
+		QueueArray q = new QueueArray(5);
+		q.enque(10);
+		q.dequeue();b
+		q.dequeue();
+	}
+
+}

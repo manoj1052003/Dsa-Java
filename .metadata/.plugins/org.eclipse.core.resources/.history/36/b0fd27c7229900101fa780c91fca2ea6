@@ -1,0 +1,84 @@
+package com.queue;
+
+public class QueueArray {
+	int front;
+	int rear;
+	int capacity; //100
+	int size;     //10
+	int[] arr;
+
+	QueueArray(int capacity) {
+		front = rear = -1;
+		this.capacity = capacity;
+		size = 0;
+		arr = new int[capacity];
+	}
+
+	public void enqueue(int ele) {
+		if (isFull()) {
+			System.out.println("its full");
+			return;
+		}
+		if (front == -1) {//point to the first val
+			front = 0;
+		}
+		arr[++rear] = ele;
+		size++;
+		System.out.println(ele + " added to queue");
+	}
+
+	public int dequeue() {
+		if (isEmpty()) {
+			System.out.println("its empty");
+			return -1;
+		}
+		int data = arr[front];
+		front++;
+		size--;
+		if(size == 0) {
+			front = rear = -1;
+		}
+		return data;
+
+	}
+
+	public int peek() {
+		if (isEmpty()) {
+			System.out.println("its empty");
+			return -1;
+		}
+		int data = arr[front];
+		return data;
+	}
+
+	public boolean isFull() {
+		if(size == capacity) { // size == capacity
+			return true;
+		}
+		return false;
+	}
+
+	public boolean isEmpty() {
+		if(size==0) {
+			return true;
+		}
+		return false;
+		
+	}
+	
+	public void print_queue() {
+		for(int i=front; i<=rear; i++) {
+			System.out.print(arr[i]+" ");
+		}
+		System.out.println();
+	}
+	
+
+	public static void main(String[] args) {
+		QueueArray q = new QueueArray(3);
+		q.enqueue(10);
+		
+		
+	}
+
+}

@@ -1,0 +1,22 @@
+package com.kiran;
+
+public class recsimple {
+	
+	public static void rec_print(int  num) {
+		if(num == 0) {
+			System.out.println(num);
+			return;
+		}
+		System.out.println(num);
+		rec_print(num-1);
+		System.out.println(num);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 5;
+		rec_print(num);
+		
+	}
+
+}

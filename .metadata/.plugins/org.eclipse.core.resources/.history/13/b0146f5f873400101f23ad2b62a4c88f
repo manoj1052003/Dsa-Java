@@ -1,0 +1,46 @@
+package com.dlinkedlist;
+
+
+class Node{
+	int data;
+	Node next;
+	Node prev;
+	
+	public Node(int data) {
+		this.data = data;
+		this.next = null;
+		this.prev = null;
+	}
+}
+
+class DlinkedList{
+	
+	Node head;
+	Node tail;
+	
+	public void add_last(int ele) {
+		Node temp = new Node(ele);
+		if( tail == null) {
+			head = temp;
+			tail = temp;
+		}
+		else {
+			temp.prev = tail;
+			tail.next = temp;
+			tail = temp;
+		}
+	}
+}
+public class first {
+
+
+	public static void main(String[] args) {
+		DlinkedList dll = new DlinkedList();
+		dll.add_last(10);
+		dll.add_last(20);
+		dll.add_last(30);
+		dll.add_last(40);
+
+	}
+
+}

@@ -1,0 +1,27 @@
+package com.oct21CSR;
+
+public class basicclass3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int per = 80;
+		if(per>=85) {
+			System.out.println("dist");
+		}
+		if(per>=60) {
+			System.out.println("first");
+		}
+		if(per>=50) {
+			System.out.println("second");
+		}
+		if(per>=35) {
+			System.out.println("just pass");
+		}
+		if(per<35) {
+			System.out.println("fail");
+		}
+		
+		
+	}
+
+}

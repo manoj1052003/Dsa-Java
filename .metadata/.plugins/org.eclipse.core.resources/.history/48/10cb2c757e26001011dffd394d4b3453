@@ -1,0 +1,16 @@
+package com.sepnov;
+
+import java.util.Arrays;
+
+public class num1 {
+
+	public static void main(String[] args) {
+
+		String s = "esala cup namde";
+		String [] arr = s.split(" ");
+		System.out.println(Arrays.toString(arr));
+	
+
+	}
+
+}

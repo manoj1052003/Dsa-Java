@@ -1,0 +1,15 @@
+package com.patterns;
+
+import java.util.Arrays;
+
+public class class3 {
+
+	public static void main(String[] args) {
+		
+		String s = "ee sala cup namde";
+		String [] arr = s.split(" ");
+		System.out.println(Arrays.toString(arr));
+		
+	}
+
+}
