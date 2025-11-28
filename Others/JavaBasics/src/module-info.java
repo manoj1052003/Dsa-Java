@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author KITS
- *
- */
-module JavaBasics {
-}
